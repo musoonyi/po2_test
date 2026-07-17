@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LUMINA</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="./css/media.css">
+    <link rel="icon" href="./images/icon.png">
+</head>
+<body>
+    <main id="MAIN">
+        <div class="main_wrap">
+            <div class="main_Bg">
+                <img src="./images/bg6_2.png" alt="배경이미지">
+            </div>
+            <div id="skip">
+                <a href="#">LuminaSuit - click</a>
+                <a href="#">LuminaSignal - click</a>
+                <a href="#">LuminaLink - click</a>
+                <a href="#">LuminaCare - click</a>
+                <a href="#">Footer - click</a>
+            </div>
+            <div id="dot">
+                <ul>
+                    <li class="active"><a href="#"><em>section1</em></a></li>
+                    <li><a href="#"><em>section2</em></a></li>
+                    <li><a href="#"><em>section3</em></a></li>
+                    <li><a href="#"><em>section4</em></a></li>
+                    <li><a href="#"><em>section5</em></a></li>
+                </ul>
+            </div>
+            <div id="LUMINA">
+                <section id="luminaSuit">
+                    <div class="suit_inner">
+                        <header class="header">
+                            <div class="headerContain">
+                                <h1 class="logo">
+                                    <a href="#">
+                                        <img src="./images/logo.png" alt="로고이미지">
+                                    </a>
+                                </h1>
+                                <div class="headerMenu">
+                                    <nav class="nav">
+                                        <ul>
+                                            <li><a href="./index1.html">컬렉션</a></li>
+                                            <li><a href="./index2.html">커뮤니티</a></li>
+                                            <li><a href="./index3.html">기술</a></li>
+                                            <li><a href="./index4.html">고객지원</a></li>
+                                        </ul>
+                                    </nav>
+                                    <div class="btn">
+                                        <button type="button" class="search_btn" aria-label="검색창 열기">
+                                            <i class="fa-solid fa-magnifying-glass"></i>
+                                        </button>
+                                        <button type="button" class="login_btn" aria-label="Login_btn">
+                                            <i class="fa-brands fa-squarespace"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                        </header> 
+                        <div class="headerPopup">
+                            <div class="search_popup">
+                                <div class="search_box">
+                                    <button type="button" class="search_close" aria-label="검색창 닫기">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </button>
+                                    <form class="search_form">
+                                        <label class="blind" for="searchInput"></label>
+                                        <input type="search" id="searchInput" class="searchBar"  placeholder="무엇을 도와드릴까요?">
+                                        <button type="submit" class="search">SEARCH</button>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="login_popup">
+                                <div class="login_box">
+                                    <button type="button" class="login_close" aria-label="로그인 닫기">
+                                        <i class="fa-solid fa-xmark"></i>
+                                    </button>
+                                    <h2 class="login_tit">LOGIN</h2>
+                                    <form class="login_form">
+                                        <label class="blind" for="loginId">이메일</label>
+                                        <input type="email" id="loginId" class="email"  placeholder="Email address">
+                                        <label class="blind" for="loginPw">비밀번호</label>
+                                        <input type="password" id="loginPw" class="pass" placeholder="Password">
+                                        <button type="submit" class="login">로그인</button>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                        <section class="banner">
+                            <div class="banner_inner">
+                                <h2 class="banner_tit">
+                                    <p class="p1">당신의 일상</p>
+                                    <p class="p2">우주로 확장되다</p>
+                                </h2>
+                                <span class="banner_desc">
+                                    가볍게, 안전하게, 그리고 스타일리시하게
+                                    <em>새로운 시대의 우주복을 경험하세요!</em>
+                                </span>
+                                <button class="start_btn"><span>탐험 시작하기</span></button>
+                            </div>
+                        </section>
+                        <div class="collection">
+                            <div class="collection_inner">
+                                <div class="collect_box">
+                                    <h3 class="collection_tit">컬렉션</h3>
+                                    <a href="./index1.html" class="collection_more" target="_blank">컬렉션 더보기 ></a>
+                                </div>
+                                <div class="collect_view swiper mySwiper">
+                                    <div class="collect_list swiper-wrapper">
+                                        <div class="collect_item swiper-slide col1">
+                                            <a href="#">
+                                                <img src="./images/wear1.png" alt="우주복1">
+                                            </a>
+                                            <span>스텔라 컴팩트 슈트</span> 
+                                            <em>₩2,390,000</em>
+                                        </div>
+                                        <div class="collect_item swiper-slide col2">
+                                            <a href="#">
+                                                <img src="./images/wear2.png" alt="우주복2">
+                                            </a>
+                                            <span>루나 에센셜 슈트</span> <em>₩2,480,000</em>
+                                        </div>
+                                        <div class="collect_item swiper-slide col3">
+                                            <a href="#">
+                                                <img src="./images/wear3.png" alt="우주복3">
+                                            </a>
+                                            <span>에이펙스 라이트 슈트</span> <em>₩2,580,000</em>
+                                        </div>
+                                        <div class="collect_item swiper-slide col4">
+                                            <a href="#">
+                                                <img src="./images/wear4.png" alt="우주복4">
+                                            </a>
+                                            <span>오로라 플렉스 슈트</span> <em>₩2,790,000</em>
+                                        </div>
+                                        <div class="collect_item swiper-slide col5">
+                                            <a href="#">
+                                                <img src="./images/wear5.png" alt="우주복5">
+                                            </a>
+                                            <span>퓨처 에어리 슈트</span> <em>₩2,690,000</em>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="collect_icon">
+                                    <div class="icon_box">
+                                        <div class="desc_icon con1"></div>
+                                        <span>초경량 소재<em>장시간 착용에도 편안한 무게</em><span>
+                                    </div>
+                                    <div class="icon_box">
+                                        <div class="desc_icon con2"></div>
+                                        <span>우주 탐험 보호<em>방사선 및 극한 환경 대응 설계</em><span>
+                                    </div>
+                                    <div class="icon_box">
+                                        <div class="desc_icon con3"></div>
+                                        <span>스마트 온도 제어<em>실시간 체온 유지 시스템</em><span>
+                                    </div>
+                                    <div class="icon_box">
+                                        <div class="desc_icon con4"></div>
+                                        <span>모듈형 디자인<em>상황에 맞춰 자유롭게 확장</em><span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+                <section id="luminaSignal">
+                    <div class="signal_inner">
+                        <div class="signal_planet">
+                            <div class="signal_planet_light"></div>
+                            <div class="signal_planet_dark"></div>
+                        </div>
+                        <div class="signal_box">
+                            <span class="signal_text">미 래 우 주 커 뮤 니 티</span>
+                            <div class="signal_tit"> S I G N A L</div>
+                            <span class="signal_desc">우주의 가능성을 연결하고
+                                <em>함께 새로운 미래를 만들어 갑니다.</em>
+                            </span>
+                            <a href="./index2.html" class="signal_btn"><span>커뮤니티 시작하기 ></span></a>
+                        </div>
+                        <div class="signal_logo">
+                            <a href="./index2.html" target="_blank">
+                                <img src="./images/logoSignal.png" alt="signal로고이미지">
+                            </a>
+                        </div>
+                    </div>
+                </section>
+                <section id="luminaLink">
+                    <div class="link_inner">
+                        <div class="link_logo">
+                            <a href="#" target="_blank">
+                                <img src="./images/logoLink.png" alt="링크로고이미지">
+                            </a>
+                        </div>
+                        <div class="linkContain">
+                            <div class="link_tit">
+                                <span>우주의 에너지를 담은</span>
+                                <span>연결의 반지</span>
+                            </div>
+                            <span class="link_desc">
+                                <em>Cutting-Edge Communication Technology</em>
+                                <em>Inspired by Cosmic Crystals</em>
+                            </span>
+                            <div class="link_icon">
+                                <div class="icon_box">
+                                    <div class="link_icon con5"></div>
+                                    <span>실시간 통신<em>0.01s 초저지연</em><span>
+                                </div>
+                                <div class="icon_box">
+                                    <div class="link_icon con6"></div>
+                                    <span>초고속 전송<em>10Tbps 속도</em><span>
+                                </div>
+                                <div class="icon_box">
+                                    <div class="link_icon con7"></div>
+                                    <span>강력한 안정성<em>99.999% 연결</em><span>
+                                </div>
+                                <div class="icon_box">
+                                    <div class="link_icon con8"></div>
+                                    <span>에너지 효율<em>스마트 전력관리</em><span>
+                                </div>
+                            </div>
+                            <div class="link_features">
+                                <div class="features_box">
+                                    <div class="features_img"></div>
+                                    <h3 class="features_tit">기술구성</h3>
+                                    <span class="features_desc">
+                                        <em>운석코어 : 고밀도 에너지 저장 구조로 장시간 안정적인 성능을 제공합니다.</em>
+                                        <em>AI 통신 칩셋 : 주변 환경을 분석하여 최적의 연결 상태를 유지합니다.</em>
+                                        <em>양자안테나 : 고속 데이터 송수신과 초저지연 통신을 구현합니다.</em>
+                                        <em>에너지 링 : 효율적인 전력 순환으로 배터리 사용 시간을 극대화합니다.</em>
+                                    </span>
+                                </div>
+                                <div class="features_cart">
+                                    <img src="./images/linebg2.png" alt="차트이미지">
+                                    <span class="line_overlay"></span>
+                                    <span class="cart_box">
+                                        <em class="name1">데이터처리</em>
+                                        <em class="name2">통신속도</em>
+                                        <em class="name3">안정성</em>
+                                        <em class="name4">에너지효율</em>
+                                        <em class="name5">연결범위</em>
+                                        <em class="name6">보안성</em>
+                                    </span>
+                                </div>
+                            </div>    
+                        </div>
+                        <div class="linkProduct">
+                            <div class="product_img"></div>
+                            <span>Tektite Core</span>
+                        </div>
+                    </div> 
+                </section>
+                <section id="luminaCare">
+                    <div class="care_inner">
+                        <div class="care_logo">
+                            <a href="./index4.html" target="_blank">
+                                <img src="./images/logoCare.png" alt="signal로고이미지">
+                            </a>
+                        </div>
+                        <div class="care_box">
+                            <div class="care_tit">
+                                <span>우리는</span>
+                                <span>미래에도 <em class="care"> 연결되어 있습니다.</em></span>
+                            </div>
+                            <span class="care_desc">
+                                <em>시간을 넘어</em> 
+                                <em>당신의 일상과 미래까지</em> 
+                                <em>LUMINA는 연결을 멈추지 않습니다.</em>
+                            </span>
+                            <a href="./index4.html" class="care_btn" target="_blank"><span>AI와 발전하는</span>
+                                <span>더 스마트한 고객지원  ></span> </a>
+                        </div>
+                    </div>
+                </section>
+                <footer id="footer">
+                    <div class="footer_inner">
+                        <div class="footerContain">
+                            <div class="footer_tit">
+                                Beyond Earth, Connected Together.
+                            </div>
+                            <span class="footer_desc">
+                                LUMINA는 차세대 우주 기술로 일상과 미래를 연결하는 새로운 경험을 설계합니다.
+                            </span>
+                            <span class="line"></span>
+                            <nav class="footer_nav">
+                                <ul>
+                                    <li>
+                                        <a href="#">COMPANY</a>
+                                        <ul class="sub">
+                                            <li><a href="#">ABOUT LUMINA</a></li>
+                                            <li><a href="#">CAREERS</a></li>
+                                            <li><a href="#">CONTACT</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">SERVICES</a>
+                                        <ul class="sub">
+                                            <li><a href="./index1.html">LUMINA SUIT</a></li>
+                                            <li><a href="./index2.html">SIGNAL</a></li>
+                                            <li><a href="./index3.html">ARTIFACT LINK</a></li>
+                                        </ul>
+                                    </li>
+                                    <li>
+                                        <a href="#">CONNECT</a>
+                                        <ul class="sub">
+                                            <li><a href="https://www.instagram.com/">INSTAGRAM</a></li>
+                                            <li><a href="https://www.youtube.com/">YOUTUBE</a></li>
+                                            <li><a href="https://x.com/">SPACEX</a></li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                            </nav>
+                            <div class="footer_copy">
+                                <span>© 2026 LUMINA. ALL RIGHTS RESERVED.
+                                    <em> LUMINA® IS A TRADEMARK OF LUMINA.</em>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </footer>
+            </div>
+            <div id="Link">
+                <div id="Link_singnal">
+                    <a href="./index2.html">
+                        <img src="./images/link1.png" alt="Signal 섹션으로 이동">
+                    </a>
+                </div>
+                <div id="Link_top">
+                    <a href="#">
+                        <img src="./images/suit2.png " alt="페이지 상단으로 이동">
+                    </a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.15/dist/gsap.min.js"></script>
+
+    <script>
+    
+
+    // dot
+
+    const dot = $("#dot>ul>li");
+    const sect = $("#LUMINA>section, #LUMINA > footer");
+    
+    dot.click(scrollNav);
+
+    function scrollNav(e){
+        e.preventDefault();
+        let target=$(this);
+        let index=target.index();
+        let section=sect.eq(index);
+        let offset=section.offset().top;
+        $("html, body").animate({scrollTop:offset},600);
+    }
+    
+    $(window).scroll(function(){
+        let wScroll = $(this).scrollTop();
+        let current = 0;
+
+        for (let i = 0; i < sect.length; i++) {
+            let sectTop = sect.eq(i).offset().top;
+
+            if (wScroll >= sectTop - 200) {
+            current = i;
+            }
+        }
+        // 페이지 맨 아래 근처면 마지막 dot 활성화
+        if (wScroll + $(window).height() >= $(document).height() - 5) {
+            current = sect.length - 1;
+        }
+        dot.removeClass("active");
+        dot.eq(current).addClass("active");
+    });
+
+
+    // search open
+    const searchPopup = document.querySelector('.search_popup');
+    const searchClose = document.querySelector('.search_close');
+    const searchBtn = document.querySelector('.search_btn');
+    
+    // 열기
+    searchBtn.addEventListener('click', () => {
+        loginPopup.classList.remove('active');
+        searchPopup.classList.add('active');
+    });
+    // 닫기
+    searchClose.addEventListener('click', () => {
+        searchPopup.classList.remove('active');
+    });
+
+    
+    // search 
+    const searchForm = document.querySelector('.search_form');
+    const searchInput = document.querySelector('#searchInput');
+
+    // 검색 실행 이벤트 (Enter or 버튼 클릭)
+    searchForm.addEventListener('submit',(e)=>{
+        e.preventDefault();
+        const keyword = searchInput.value.trim(); 
+        // 입력값 공백 제거
+        
+        // 값이 없으면 실행 안 함
+        if (keyword === '') return;
+
+        // 네이버 검색 URL 생성
+        const url = `https://search.naver.com/search.naver?query=${encodeURIComponent(keyword)}`;
+        // ${encodeURIComponent(keyword) :검색어를 URL 안전한 문자로 변환
+
+        console.log(searchForm);
+        console.log(searchInput);
+    
+        window.open(url, '_blank');
+
+        searchInput.value = '';
+    });
+        
+
+    //login
+    const loginPopup = document.querySelector('.login_popup');
+    const loginClose = document.querySelector('.login_close');
+    const loginForm = document.querySelector('.login_form');
+    const loginBtn = document.querySelector('.login_btn'); 
+
+    // 열기
+    loginBtn.addEventListener('click', () => {
+        searchPopup.classList.remove('active');
+        loginPopup.classList.add('active');
+    });
+    // 닫기
+    loginClose.addEventListener('click', () => {
+        loginPopup.classList.remove('active');
+    });
+
+
+    //login
+    loginForm.addEventListener('submit',(e) =>{
+        e.preventDefault();
+
+        const email = document.querySelector('#loginId').value.trim();
+        const pw = document.querySelector('#loginPw').value.trim();
+
+        // 임의 값이라도 입력되면 실행
+        if (email === '' || pw === '') return;
+
+        // 성공 처리 (임시)
+        loginPopup.classList.remove('active'); //창닫기
+        loginForm.reset(); // 입력값 초기화
+    });
+    
+
+    // 검색, 로그인 ESC키 닫기
+    document.addEventListener('keydown', (e) => {
+        if (e.key === 'Escape') {
+            searchPopup.classList.remove('active');
+            loginPopup.classList.remove('active');
+        }
+    });
+
+
+    //스크롤내려오기
+    
+    window.addEventListener("scroll", () => {
+        const bg = document.querySelector("#MAIN .main_Bg");
+        if (!bg) return;
+
+        const w = window.innerWidth;
+        const scrollY = window.scrollY;
+
+        let speed = 0.63; // PC 기본
+
+        if (w <= 300) {
+            speed = 0.6;      // Small Mobile
+        } else if (w <= 440) {
+            speed = 0.98;      // Mobile
+        } else if (w <= 600) {
+            speed = 0.9;      // Large Mobile
+        } else if (w <= 780) {
+            speed = 0.9;      // Small Tablet
+        } else if (w <= 900) {
+            speed = 0.9;      // Tablet
+        } else if (w <= 1039) {
+            speed = 0.9;      // Large Tablet
+        } else if (w >= 1440) {
+            speed = 0.63;        // Large PC
+        }
+
+        bg.style.transform = `translateY(${scrollY * speed}px)`;
+    });
+
+    
+
+    //클릭시 이벤트
+
+    document.querySelectorAll('.desc_icon').forEach(icon => {
+        icon.addEventListener('click', () => {
+            icon.classList.toggle('on');
+        });
+    });
+
+    const linkProduct = document.querySelector('.linkProduct');
+    linkProduct.addEventListener('click', () => {
+        linkProduct.classList.toggle('on');
+    });
+
+    const linkDesc = document.querySelector('.linkContain .link_desc');
+    linkDesc.addEventListener('click', () => {
+        linkDesc.classList.toggle('on');
+    });
+
+    document.querySelectorAll('.icon_box').forEach(box => {
+        box.addEventListener('click', () => {
+            box.classList.toggle('on');
+        });
+    });
+    document.querySelectorAll('.features_cart').forEach(cart => {
+        cart.addEventListener('click', () => {
+            cart.classList.toggle('on');
+        });
+    });
+
+
+
+   //순차적 슬라이드
+    document.addEventListener("DOMContentLoaded", () => {
+
+    const section = document.querySelector("#luminaLink");
+    if (!section) return;
+
+    const tit = section.querySelector(".link_tit");
+    const desc = section.querySelector(".link_desc");
+
+    const featureTit = section.querySelector(".features_tit");
+    const featureDesc = section.querySelector(".features_desc");
+    const ems = section.querySelectorAll(".features_desc > em");
+
+    const icons = section.querySelectorAll(".icon_box");
+    const featureImg = section.querySelector(".features_img");
+    const cart = section.querySelector(".features_cart");
+
+    const product = section.querySelector(".linkProduct");
+    const productImg = section.querySelector(".product_img");
+    const productText = section.querySelector(".linkProduct > span");
+
+    let timer = null;
+    let hasPlayed = false;
+
+    const reset = () => {
+        section.querySelectorAll(".is_active").forEach(el => {
+            el.classList.remove("is_active");
+        });
+    };
+
+    const play = () => {
+        reset();
+        let delay = 250;
+
+        // 타이틀 + 설명
+        setTimeout(() => {
+            tit?.classList.add("is_active");
+            desc?.classList.add("is_active");
+        }, delay);
+
+        delay += 400;
+
+        // 기술
+        setTimeout(() => {
+            featureTit?.classList.add("is_active");
+            featureDesc?.classList.add("is_active");
+        }, delay);
+
+        delay += 300;
+
+        // 기술 상세
+        ems.forEach(el => {
+            setTimeout(() => el.classList.add("is_active"), delay);
+            delay += 120;
+        });
+
+        // 아이콘
+        icons.forEach(el => {
+            setTimeout(() => el.classList.add("is_active"), delay);
+            delay += 120;
+        });
+
+        // 이미지 + 카드
+        setTimeout(() => featureImg?.classList.add("is_active"), delay);
+        delay += 200;
+
+        setTimeout(() => cart?.classList.add("is_active"), delay);
+        delay += 200;
+
+        // 반지
+        setTimeout(() => {
+            product?.classList.add("is_active");
+            productImg?.classList.add("is_active");
+            productText?.classList.add("is_active");
+        }, delay);
+
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    clearTimeout(timer);
+                    timer = setTimeout(() => {
+                        hasPlayed = true;
+                        play();
+                    }, 200);
+                } else {
+                    // ⭐ 핵심: 완전 초기화 후 다시 가능하게
+                    if (hasPlayed) {
+                        reset();
+                    }
+                }
+            });
+        }, {
+            threshold: 0.3
+        });
+
+        observer.observe(section);
+    });
+
+
+
+
+
+    //마우스효과
+    document.addEventListener("DOMContentLoaded", () => {
+        const luminaSignal = document.querySelector("#luminaSignal");
+        const planet = document.querySelector(".signal_planet");
+        const dark = document.querySelector(".signal_planet_dark");
+
+        if (!luminaSignal || !planet || !dark) return;
+
+        let lastX = 0;
+        let lastY = 0;
+
+        function hideDark() {
+            gsap.to(dark, {
+            duration: 0.45,
+            clipPath: `circle(0px at ${lastX}px ${lastY}px)`,
+            ease: "power2.out",
+            overwrite: true
+            });
+        }
+
+        function follow(clientX, clientY) {
+            const rect = planet.getBoundingClientRect();
+
+            const x = clientX - rect.left;
+            const y = clientY - rect.top;
+
+            const centerX = rect.width / 2;
+            const centerY = rect.height / 2;
+            const radius = Math.min(rect.width, rect.height) / 2;
+
+            const distance = Math.hypot(x - centerX, y - centerY);
+
+            if (distance <= radius) {
+            lastX = x;
+            lastY = y;
+
+            gsap.to(dark, {
+                duration: 0.25,
+                clipPath: `circle(180px at ${x}px ${y}px)`,
+                ease: "power2.out",
+                overwrite: true
+            });
+            } else {
+            hideDark();
+            }
+        }
+
+        /* PC */
+        luminaSignal.addEventListener("mousemove", (e) => {
+            follow(e.clientX, e.clientY);
+        });
+
+        luminaSignal.addEventListener("mouseleave", hideDark);
+
+        /* 휴대폰 */
+        luminaSignal.addEventListener(
+            "touchstart",
+            (e) => {
+            const touch = e.touches[0];
+            follow(touch.clientX, touch.clientY);
+            },
+            { passive: true }
+        );
+
+        luminaSignal.addEventListener(
+            "touchmove",
+            (e) => {
+            const touch = e.touches[0];
+            follow(touch.clientX, touch.clientY);
+            },
+            { passive: true }
+        );
+        });
+
+        //top
+        const topBtn = document.querySelector("#Link_top a");
+
+            topBtn.addEventListener("click", (e) => {
+            e.preventDefault();
+            window.scrollTo({
+                top: 0,
+                behavior: "smooth"
+            });
+        });
+
+
+
+
+    
+    </script>
+
+</body>
+</html>

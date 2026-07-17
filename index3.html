@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Skill</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/section/skill.css">
+    <link rel="icon" href="./images/icon.png">
+</head>
+<body>
+    <div class="skillWrap">
+         <nav class="skillNav">
+            <div class="skillNav_inner">
+                <ul class="skillNav_list">
+                    <li><a href="./index.html">홈</a></li>
+                    <li>></li>
+                    <li><a href="./index3.html" target="_blank">기술</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="swiper mySwiper2">
+            <div class="swiper-wrapper page_list">
+                <div class="swiper-slide">
+                    <img src="./images/page0.png" alt="페이지제목">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/page1.png" alt="페이지1">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/page2.png" alt="페이지2">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/page3.png" alt="페이지3">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/page4.png" alt="페이지4">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/page5.png" alt="페이지5">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/page6.png" alt="페이지6">
+                </div>
+                <div class="swiper-slide">
+                    <img src="./images/page7.png" alt="페이지7">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
+    
+    <script>
+
+        var swiper2 = new Swiper('.mySwiper2', {
+            grabCursor: true,
+            effect: 'creative',
+            speed: 800,
+
+            creativeEffect: {
+                prev: {
+                    shadow: true,
+                    translate: ['-100%', 0, -300],
+                    rotate: [0, 0, -5],
+                },
+                next: {
+                    shadow: true,
+                    translate: ['100%', 0, -300],
+                    rotate: [0, 0, 5],
+                },
+            },
+        });
+
+        
+      
+
+    </script>
+</body>
+</html>

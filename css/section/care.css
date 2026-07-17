@@ -1,0 +1,328 @@
+@charset "utf-8";
+/* setting */
+@import url(../setting/font.css);
+@import url(../setting/reset.css);
+@import url(../setting/vars.css);
+
+*{color: var(--text1);}
+.careWrap {
+    position: relative;
+    height: 100vh;
+    overflow: hidden;
+}
+/* #careVideo */
+#careVideo{ 
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    z-index: 0;
+    pointer-events: none;
+}
+#careVideo>video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+#careVideo>video>source{}
+
+/* #careHeader */
+#careHeader{
+    position: absolute;
+    top: -187.5px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+    width: 375px;
+    height: 375px;
+}
+#careHeader::before{
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    background: url(../../images/care_img1.png) center no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+    animation: rotate360 7s linear infinite;
+    transform-origin:center;
+    box-shadow: 0 0 20px 10px #FF1B1F;
+    border-radius: 50%;
+    filter: hue-rotate(200deg);
+}
+@keyframes rotate360{
+    0%{transform:rotate(0deg) scale(0.7);}
+    30%{transform:rotate(0deg) scale(5);}
+    100%{transform:rotate(360deg) scale(10);}
+}
+
+.careHeader_inner{
+    position:relative;
+    z-index:1;
+    width: 100%;
+}
+.careHeader_logo{
+    position: absolute;
+    top: 220px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 250px;
+    height: 64px;
+    transition: 0.3s;
+}
+.careHeader_logo>a{
+    display: block;
+}
+.careHeader_logo>a>img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: 0.3s;
+}
+.careHeader_logo:hover>a>img{
+    filter:
+        drop-shadow(0 0 5px rgba(0, 0, 0, 0.7));
+    transform: scale(1.02);
+}
+
+/* .careNav */
+.careNav{
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 11;
+}
+.careNav_inner{}
+.careNav_list{}
+.careNav_list>li{
+    display: inline;
+    margin-right: 10px;
+    color: var(--w);
+}
+.careNav_list>li>a{
+    display: inline-block;
+    font-family: var(--mainKor-font);
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--w);
+}
+
+/* #care */
+#care{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) translateY(-85px);
+    z-index: 10;
+}
+.care_inner{}
+/* .careSearch */
+.careSearch{
+    width: 700px;
+    height: 70px;
+    background-color: rgba(255,255,255,0.3);
+    border-radius: 10px;
+    border-top: 1px solid var(--w);
+    border-bottom: 1px solid var(--w);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.careSearch>input{
+    width: 70%;
+    height: 80%;
+    border-radius: 7px;
+    background: none;
+    border: none;
+    outline: none;
+    font-size: 24px;
+    color: var(--w);
+    text-align: center;
+    margin-left: 15%;
+}
+.careSearch>input::placeholder{
+    color: var(--gray-300);
+}
+
+.careSearch .careSearch_btn{
+    width: 15%;
+    cursor: pointer;
+    background: none;
+    border: none;
+}
+.careSearch .careSearch_btn i{
+    font-size: 26px;
+    color: rgba(255,255,255,0.7);
+    transition: 0.3s;
+}
+.careSearch .careSearch_btn:hover i{
+    color: var(--w);
+}
+
+
+/* .careBrand */
+.careBrand{
+    position: absolute;
+    top: 100px;
+    left: 50%;
+    transform: translateX(-50%);
+    cursor: pointer;
+}
+
+.careBrand .careBrand_list{}
+.careBrand .careBrand_list>li{
+    width: 500px;
+    height: 60px;
+    border-radius: 10px;
+    border: 1px solid var(--w);
+    background-color: rgba(255,255,255,0.3);
+    margin-bottom: 20px;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.5s;
+}
+.careBrand .careBrand_list>li>button{
+    font-size: 24px;
+    font-weight: 800;
+    color: var(--w);
+    cursor: pointer;
+    transition: 0.3s;
+    transform: scale(1);
+}
+.careBrand .careBrand_list>li:hover>button{
+    color: var(--gray-500);
+    transform: scale(0.9);
+}
+.careBrand .careBrand_list>li:hover{
+    transform: scale(0.95);
+}
+
+
+/* --- */
+.answerBox{
+    width:600px;
+    min-height:200px;
+    border-radius:10px;
+    border:1px solid var(--w);
+    background-color:rgba(255,255,255,0.3);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    gap:30px;
+}
+
+.answerText{
+    color:var(--w);
+    font-size:24px;
+    font-weight:600;
+    text-align:center;
+}
+.backBtn{
+    width:150px;
+    height:40px;
+    border-radius:25px;
+    border:1px solid var(--w);
+    background:none;
+    color:var(--w);
+    cursor:pointer;
+    transition: 0.3s;
+}
+.backBtn:hover{
+    background-color: rgba(255,255,255,0.3);
+    color:var(--b);
+}
+
+.videoLink{
+    cursor:pointer;
+    color:var(--textH3);
+    transition: 0.3s;
+    font-weight: 600;
+}
+.videoLink:hover{
+    color:var(--textH1);
+}
+
+
+/*  */
+
+.videoConsult{
+    visibility:hidden;
+    opacity:0;
+
+    position:fixed;
+    top:70px;
+    left:0;
+    width:100%;
+    height:100%;
+
+    background:rgba(0,0,0,0.7);
+
+    z-index:999;
+    transition: 0.4s;
+}
+.videoConsult.active{
+    visibility:visible;
+    opacity:1;
+}
+.videoConsult_box{
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-30%);
+    width:1000px;
+    height:500px;
+
+    background:rgb(255,255,255);
+    border-radius:20px;
+    border: 3px solid rgba(0,0,0,0.2);
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+    align-items:center;
+    transition:0.4s;
+}
+.videoConsult.active .videoConsult_box{
+    transform:translate(-50%, -40%);
+}
+.videoConsult_box>h2{
+    font-size: 18px;
+    font-weight: 600;
+    font-family: var(--mainKor-font);
+    text-transform: uppercase;
+    margin-bottom: 10px;
+}
+
+.cameraArea{
+    width:700px;
+    height:400px;
+
+    background:#222;
+
+    color:#fff;
+
+    display:flex;
+    justify-content:center;
+    align-items:center;
+}
+.videoConsult_box>button{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid var(--b);
+    font-size: 18px;
+    margin-top: 10px;
+    cursor: pointer;
+    line-height: 20px;
+}
+

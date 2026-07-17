@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuminaCare</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="./css/section/care.css">
+    <link rel="stylesheet" href="./css/section/care_media.css">
+    <link rel="icon" href="./images/icon.png">
+</head>
+<body>
+    <div class="careWrap">
+        <figure id="careVideo">
+            <video autoplay muted loop>
+                <source src="./images/care_bgvideo.mp4" type="video/mp4">
+            </video>
+        </figure>
+        <header id="careHeader">
+            <div class="careHeader_inner">
+                <div class="careHeader_logo">
+                    <a href="./index4.html">
+                        <img src="./images/logoCare.png" alt="케어로고이미지">
+                    </a>
+                </div>
+            </div>
+        </header>
+        <nav class="careNav">
+            <div class="careNav_inner">
+                <ul class="careNav_list">
+                    <li><a href="./index.html">홈</a></li>
+                    <li>></li>
+                    <li><a href="./index4.html" target="_blank">고객지원</a></li>
+                </ul>
+            </div>
+        </nav>
+        <section id="care">
+            <div class="care_inner">
+                <div class="careSearch">
+                    <input id="careInput" type="text"  placeholder="무엇을 도와드릴까요?"
+                      onkeydown="enterSearch(event)">
+                    <button aria-label="검색" class="careSearch_btn" onclick="searchCare()">
+                        <i class="fa-solid fa-magnifying-glass"></i>
+                    </button>
+                </div>
+                <div id="careMenu" class="careBrand">
+                    <ul class="careBrand_list">
+                        <li><button onclick="selectBrand('suit')">LUMINA SUIT</button></li>
+                        <li><button onclick="selectBrand('signal')">SIGNAL</button></li>
+                        <li><button onclick="selectBrand('link')">LUMINA LINK</button></li>
+                    </ul>
+                </div>
+            </div>
+            <div id="videoConsult" class="videoConsult">
+                <div class="slide left"></div>
+                <div class="slide right"></div>
+                <div class="videoConsult_box">
+                    <h2>AI Video Consultation</h2>
+                    <div class="cameraArea">
+                        상담 화면
+                    </div>
+                    <button onclick="closeVideo()">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    
+
+    <script>
+
+        //데이터 관리
+        const careData = {
+
+            suit: {
+                title:"LUMINA SUIT",
+                questions:[
+                    {
+                        question:"주문방법",
+                        answer:"주문은 컬렉션 페이지에서 가능합니다.",
+                    },
+                    {
+                        question:"배송현황",
+                        answer:[
+                            "마이페이지에서 배송조회 가능합니다.",
+                            "아티팩트 연결하여 배송조회 합니다.",
+                        ],
+                    },
+                    {
+                        question:"사이즈",
+                        answer:"수트의 사이즈 조절 버튼을 누르시면<br>자동조절 됩니다.",
+                    },
+                    {
+                        question:"제품관리",
+                        answer:"루미나 세탁소를 이용해서<br>관리할 수 있습니다.",
+                    },
+                ]
+            },
+
+            signal:{
+                title:"SIGNAL",
+                questions:[
+                    {
+                        question:"가입방법",
+                        answer:"아티팩트 고유 IP 주소를 연동 해주세요.",
+                    },
+                    {
+                        question:"탈퇴하기",
+                        answer:"아티팩트 고유 IP 주소를 연동 해주세요.",
+                    },
+                ]
+            },
+
+            link:{
+                title:"LUMINA LINK",
+                questions:[
+                    {
+                        question:"연결방법",
+                        answer:[
+                            "화상으로 AI 상담원 연결",
+                            "루미나케어 전화번호 707",
+                        ],
+                    },
+                    {
+                        question:"사용방법",
+                        answer:[
+                            "화상으로 AI 상담원 연결",
+                            "루미나케어 전화번호 707",
+                        ],
+                    },
+                    {
+                        question:"통신문제해결",
+                        answer:[
+                            "화상으로 AI 상담원 연결",
+                            "루미나케어 전화번호 707",
+                        ],
+                    },
+                ]
+            }
+        };
+
+
+        //문의 실행
+
+        function selectBrand(brand){
+
+            const menu = document.getElementById("careMenu");
+
+            const data = careData[brand];
+
+            let html = `
+                <ul class="careBrand_list">
+            `;
+
+            data.questions.forEach(function(item){
+
+                html += `
+                    <li>
+                        <button onclick="showAnswer('${brand}', '${item.question}')">
+                            ${item.question}
+                        </button>
+                    </li>
+                `;
+
+            });
+
+            html += `
+                </ul>
+            `;
+            menu.innerHTML = html;
+        }
+
+        function showAnswer(brand, question){
+            const menu = document.getElementById("careMenu");
+            const data = careData[brand]
+            const result = data.questions.find(function(item){
+                return item.question === question;
+            });
+            menu.innerHTML = `
+            <div class="answerBox">
+                <div class="answerText">
+                ${
+                    Array.isArray(result.answer)
+                    ? result.answer.map(function(item){
+                        if(item === "화상으로 AI 상담원 연결"){
+                            return `
+                                <p class="videoLink" onclick="videoCall()">
+                                    ${item}
+                                </p>
+                            `;
+                        } else {
+                            return `
+                                <p class="answerText">
+                                    ${item}
+                                </p>
+                            `;
+
+                        }
+                    }).join("")
+                    : result.answer
+
+                }
+            </div>
+                
+                <button class="backBtn" onclick="selectBrand('${brand}')">
+                    이전으로
+                </button>
+            </div>
+        `;
+        }
+
+        function videoCall(){
+            alert("화상 상담으로 연결됩니다.");
+
+        }
+
+        //화상연결
+        function videoCall(){
+            const video = document.getElementById("videoConsult");
+            video.classList.add("active");
+        }
+        function closeVideo(){
+            const video = document.getElementById("videoConsult");
+            video.classList.remove("active");
+        }
+        
+
+        // 검색창
+       function searchCare(){
+            const input = document.getElementById("careInput").value.trim();
+            if(input === ""){
+                alert("궁금한 내용을 입력해주세요.");
+                return;
+            }
+            alert("화상 상담으로 연결됩니다.");
+        }
+        function enterSearch(event){
+            if(event.key === "Enter"){
+                searchCare();
+            }
+        }
+
+    </script>
+</body>
+</html>

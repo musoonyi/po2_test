@@ -1,0 +1,1200 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuminaSignal</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="./css/section/signal.css">
+    <link rel="stylesheet" href="./css/section/signal_media.css">
+    <link rel="icon" href="./images/icon.png">
+</head>
+<body>
+    <div class="signarWrap">
+        <video autoplay muted loop id="signarVideo" >
+            <source src="./images/7878.mp4" type="video/mp4">
+        </video>
+        <header id="signalHeader">
+            <div class="signalHeader_inner">
+                <div class="signalHeader_logo">
+                    <a href="./index2.html">
+                        <img src="./images/logoSignal2.png" alt="시그널로고이미지">
+                    </a>
+                </div>
+            </div>
+        </header>
+        <nav class="signalNav">
+            <div class="signalNav_inner">
+                <ul class="signalNav_list">
+                    <li><a href="./index.html">홈</a></li>
+                    <li>></li>
+                    <li><a href="./index2.html" target="_blank">커뮤니티</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="signalMy">
+            <button class="camera" type="button" aria-label="카메라">
+                <img src="./images/camera_icon.png" alt="카메라아이콘">
+            </button>
+            <div class="myProfile">
+                <img src="./images/profile0.png" alt="나의 프로필이미지">
+            </div>
+            <button class="money" type="button" aria-label="머니">
+                <img src="./images/money_icon.png" alt="머니아이콘">
+            </button>
+        </div>
+        <div class="signalTop">
+            <section class="signalLeft">    
+                <div class="trend">
+                    <h3 class="trend_tit">
+                        <a href="#">
+                            <span>SPACE</span>
+                            <span>KEY →</span>
+                            <span>WORD</span>
+                        </a>
+                    </h3>
+                    <ul class="trend_list">
+                        <li class="t1">
+                            <img src="./images/key380.png" alt="트렌드키워드">
+                        </li>
+                        <li class="t2">
+                            <img src="./images/key580.png" alt="트렌드키워드">
+                        </li>
+                        <li class="t3">
+                            <img src="./images/key840.png" alt="트렌드키워드">
+                        </li>
+                        <li class="t4">
+                            <img src="./images/key1100.png" alt="트렌드키워드">
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <div class="signal_cut">
+                <section class="signalRight">
+                <div class="circleBg"></div>
+                <div id="profileCircle">
+                    <canvas id="physics"></canvas>
+                </div>
+                </section>
+            </div>
+        </div>
+        <div class="singalBottomWrap">
+            <div class="rotateGroup">
+                <div class="rocket"></div>
+                <div class="circleRotate"></div>
+            </div>
+            <div class="signalBottom">
+                <section class="signalCenter">
+                    <div class="swiper mySwiper slideBox">
+                        <div class="swiper-wrapper slideBox_list">
+                            <div class="swiper-slide s s1">
+                                <div class="slideTop">
+                                    <img src="./images/profile1.png" alt="프로필1">
+                                    <div class="slide_box">
+                                        <span class="profile">미래학 연구소 &nbsp;</span>
+                                        <span class="userid">futuremoblirity</span>
+                                        <span class="hour">ㆍ2h </span>
+                                        <span class="desc">새로운 도시형 플라잉카 프로토타입 공개!
+                                            <em>2030년 상용화를 목표로 테스트 중입니다</em>
+                                        </span>
+                                    </div>
+                                    <div class="slid_more">
+                                        <span class="more"></span>
+                                        <ul class="more_list">
+                                            <li><i class="fa-solid fa-user-plus"></i></li>
+                                            <li><i class="fa-solid fa-thumbtack"></i></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="slideCenter">
+                                    <div class="swiper mySwiper2">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="./images/slide1.png" alt="슬라이드이미지1">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="./images/slide1_2.png" alt="슬라이드이미지1_2">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="./images/slide1_3.png" alt="슬라이드이미지1_3">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="./images/slide1_4.png" alt="슬라이드이미지1_4">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="./images/slide1_5.png" alt="슬라이드이미지1_5">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="./images/slide1_6.png" alt="슬라이드이미지1_6">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slideBottom">
+                                    <div class="icon">
+                                        <a href="#">
+                                            <img src="./images/slideicon1.png" alt="슬라이드아이콘1">
+                                        </a>
+                                        <span>129</span>
+                                    </div>
+                                    <div class="icon">
+                                        <a href="#">
+                                            <img src="./images/slideicon2.png" alt="슬라이드아이콘2">
+                                        </a>
+                                    </div>
+                                    <div class="icon">
+                                        <span class="heart">35</span>
+                                        <a href="javascript:void(0);" class="heart_btn">
+                                            <img src="./images/slideicon3.png" alt="슬라이드아이콘3">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide s s2">
+                                <div class="slideTop">
+                                    <img src="./images/profile2.png" alt="프로필1">
+                                    <div class="slide_box">
+                                        <span class="profile">오로라 키즈도서관 &nbsp;</span>
+                                        <span class="userid">AuroraLibrary</span>
+                                        <span class="hour">ㆍ 1h </span>
+                                        <span class="desc">조용한 우주 속 작은 모험
+                                            <em>책장을 넘길 때마다 상상력키가 쑥쑥!</em>
+                                        </span>
+                                    </div>
+                                    <div class="slid_more">
+                                        <span class="more"></span>
+                                        <ul class="more_list">
+                                            <li><i class="fa-solid fa-user-plus"></i></li>
+                                            <li><i class="fa-solid fa-thumbtack"></i></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="slideCenter">
+                                    <a href="#">
+                                        <img src="./images/slide2.png" alt="슬라이드이미지2">
+                                    </a>
+                                </div>
+                                <div class="slideBottom">
+                                    <div class="icon">
+                                        <a href="#">
+                                            <img src="./images/slideicon1.png" alt="슬라이드아이콘1">
+                                        </a>
+                                        <span>85</span>
+                                    </div>
+                                    <div class="icon">
+                                        <a href="#">
+                                            <img src="./images/slideicon2.png" alt="슬라이드아이콘2">
+                                        </a>
+                                    </div>
+                                    <div class="icon">
+                                        <span class="heart">17</span>
+                                        <a href="javascript:void(0);" class="heart_btn">
+                                            <img src="./images/slideicon3.png" alt="슬라이드아이콘3">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide s s3">
+                                <div class="slideTop">
+                                    <img src="./images/profile3.png" alt="프로필1">
+                                    <div class="slide_box">
+                                        <span class="profile">화성올림픽 &nbsp;</span>
+                                        <span class="userid">USF</span>
+                                        <span class="hour">ㆍ3h </span>
+                                        <span class="desc">Mars Olympic Opening Ceremony
+                                            <em>화성 올림픽의 생생한 소식과 미래 콘텐츠를 만나보세요</em>
+                                        </span>
+                                    </div>
+                                    <div class="slid_more">
+                                        <span class="more"></span>
+                                        <ul class="more_list">
+                                            <li><i class="fa-solid fa-user-plus"></i></li>
+                                            <li><i class="fa-solid fa-thumbtack"></i></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="slideCenter">
+                                    <a href="#">
+                                        <img src="./images/slide3.png" alt="슬라이드이미지3">
+                                    </a>
+                                </div>
+                                <div class="slideBottom">
+                                    <div class="icon">
+                                        <a href="#">
+                                            <img src="./images/slideicon1.png" alt="슬라이드아이콘1">
+                                        </a>
+                                        <span>240</span>
+                                    </div>
+                                    <div class="icon">
+                                        <a href="#">
+                                            <img src="./images/slideicon2.png" alt="슬라이드아이콘2">
+                                        </a>
+                                    </div>
+                                    <div class="icon">
+                                        <span class="heart">90</span>
+                                        <a href="javascript:void(0);" class="heart_btn">
+                                            <img src="./images/slideicon3.png" alt="슬라이드아이콘3">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide s s4">
+                                <div class="slideTop">
+                                    <img src="./images/profile4.png" alt="프로필1">
+                                    <div class="slide_box">
+                                        <span class="profile">레드 플레넷 &nbsp;</span>
+                                        <span class="userid">RedPlanet</span>
+                                        <span class="hour">ㆍ2h </span>
+                                        <span class="desc">화성에서 맞이한 27번째 아침
+                                            <em>끝없이 펼쳐진 지평선 위로 또 하나의 탐사</em>
+                                        </span>
+                                    </div>
+                                    <div class="slid_more">
+                                        <span class="more"></span>
+                                        <ul class="more_list">
+                                            <li><i class="fa-solid fa-user-plus"></i></li>
+                                            <li><i class="fa-solid fa-thumbtack"></i></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="slideCenter">
+                                    <a href="#">
+                                        <img src="./images/slide4.png" alt="슬라이드이미지4">
+                                    </a>
+                                </div>
+                                <div class="slideBottom">
+                                    <div class="icon">
+                                        <a href="#">
+                                            <img src="./images/slideicon1.png" alt="슬라이드아이콘1">
+                                        </a>
+                                        <span>23</span>
+                                    </div>
+                                    <div class="icon">
+                                        <a href="#">
+                                            <img src="./images/slideicon2.png" alt="슬라이드아이콘2">
+                                        </a>
+                                    </div>
+                                    <div class="icon">
+                                        <span class="heart">10</span>
+                                        <a href="javascript:void(0);" class="heart_btn">
+                                            <img src="./images/slideicon3.png" alt="슬라이드아이콘3">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide s s5">
+                                <div class="slideTop">
+                                    <img src="./images/profile5.png" alt="프로필1">
+                                    <div class="slide_box">
+                                        <span class="profile">궤도 조정 &nbsp;</span>
+                                        <span class="userid">satlink</span>
+                                        <span class="hour">ㆍ4h </span>
+                                        <span class="desc">이번 업데이트 문제없이 완료!
+                                            <em>우리의 안전을 지키자</em>
+                                        </span>
+                                    </div>
+                                    <div class="slid_more">
+                                        <span class="more"></span>
+                                        <ul class="more_list">
+                                            <li><i class="fa-solid fa-user-plus"></i></li>
+                                            <li><i class="fa-solid fa-thumbtack"></i></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="slideCenter">
+                                    <a href="#">
+                                        <img src="./images/slide5.png" alt="슬라이드 이미지5">
+                                    </a>
+                                </div>
+                                <div class="slideBottom">
+                                    <div class="icon">
+                                        <a href="#">
+                                            <img src="./images/slideicon1.png" alt="슬라이드아이콘1">
+                                        </a>
+                                        <span>10</span>
+                                    </div>
+                                    <div class="icon">
+                                        <a href="#">
+                                            <img src="./images/slideicon2.png" alt="슬라이드아이콘2">
+                                        </a>
+                                    </div>
+                                    <div class="icon">
+                                        <span class="heart">60</span>
+                                        <a href="javascript:void(0);" class="heart_btn">
+                                            <img src="./images/slideicon3.png" alt="슬라이드아이콘3">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide s s6">
+                                <div class="slideTop">
+                                    <img src="./images/profile6.png" alt="프로필1">
+                                    <div class="slide_box">
+                                        <span class="profile">우주미래전 &nbsp;</span>
+                                        <span class="userid">SpaceExpo</span>
+                                        <span class="hour">ㆍ8h </span>
+                                        <span class="desc">GJ작가의 우주미래전
+                                            <em>상상은 언제나 우주보다 더 따뜻하다</em>
+                                        </span>
+                                    </div>
+                                    <div class="slid_more">
+                                        <span class="more"></span>
+                                        <ul class="more_list">
+                                            <li><i class="fa-solid fa-user-plus"></i></li>
+                                            <li><i class="fa-solid fa-thumbtack"></i></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="slideCenter">
+                                    <div class="swiper mySwiper2">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="./images/slide6.png" alt="슬라이드이미지6">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="./images/slide6_2.png" alt="슬라이드이미지6_2">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="./images/slide6_3.png" alt="슬라이드이미지6_3">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="./images/slide6_4.png" alt="슬라이드이미지6_4">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="./images/slide6_5.png" alt="슬라이드이미지6_5">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="./images/slide6_6.png" alt="슬라이드이미지1_6">
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="slideBottom">
+                                    <div class="icon">
+                                        <a href="#">
+                                            <img src="./images/slideicon1.png" alt="슬라이드아이콘1">
+                                        </a>
+                                        <span>101</span>
+                                    </div>
+                                    <div class="icon">
+                                        <a href="#">
+                                            <img src="./images/slideicon2.png" alt="슬라이드아이콘2">
+                                        </a>
+                                    </div>
+                                    <div class="icon">
+                                        <span class="heart">70</span>
+                                        <a href="javascript:void(0);" class="heart_btn">
+                                            <img src="./images/slideicon3.png" alt="슬라이드아이콘3">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide s s7">
+                                <div class="slideTop">
+                                    <img src="./images/profile7.png" alt="프로필1">
+                                    <div class="slide_box">
+                                        <span class="profile">코스모스 &nbsp;</span>
+                                        <span class="userid">cosmo_j</span>
+                                        <span class="hour">ㆍ3h </span>
+                                        <span class="desc">평범해서 더 좋은 하루
+                                            <em>특별한 일은 없었지만 행복한 나날이다</em>
+                                        </span>
+                                    </div>
+                                    <div class="slid_more">
+                                        <span class="more"></span>
+                                        <ul class="more_list">
+                                            <li><i class="fa-solid fa-user-plus"></i></li>
+                                            <li><i class="fa-solid fa-thumbtack"></i></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="slideCenter">
+                                    <a href="#">
+                                        <img src="./images/slide7.png" alt="슬라이드이미지7">
+                                    </a>
+                                </div>
+                                <div class="slideBottom">
+                                    <div class="icon">
+                                        <a href="#">
+                                            <img src="./images/slideicon1.png" alt="슬라이드아이콘1">
+                                        </a>
+                                        <span>33</span>
+                                    </div>
+                                    <div class="icon">
+                                        <a href="#">
+                                            <img src="./images/slideicon2.png" alt="슬라이드아이콘2">
+                                        </a>
+                                    </div>
+                                    <div class="icon">
+                                        <span class="heart">50</span>
+                                        <a href="javascript:void(0);" class="heart_btn">
+                                            <img src="./images/slideicon3.png" alt="슬라이드아이콘3">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide s s8">
+                                <div class="slideTop">
+                                    <img src="./images/profile8.png" alt="프로필1">
+                                    <div class="slide_box">
+                                        <span class="profile">식물구역 오픈 &nbsp;</span>
+                                        <span class="userid">moon_daily</span>
+                                        <span class="hour">ㆍ2h </span>
+                                        <span class="desc">점심먹고 잠깐 둘러본 식물구역
+                                            <em>초록색이 많아지니 답답함도 가시네</em>
+                                        </span>
+                                    </div>
+                                    <div class="slid_more">
+                                        <span class="more"></span>
+                                        <ul class="more_list">
+                                            <li><i class="fa-solid fa-user-plus"></i></li>
+                                            <li><i class="fa-solid fa-thumbtack"></i></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="slideCenter">
+                                    <a href="#">
+                                        <img src="./images/slide8.png" alt="슬라이드이미지8">
+                                    </a>
+                                </div>
+                                <div class="slideBottom">
+                                    <div class="icon">
+                                        <a href="#">
+                                            <img src="./images/slideicon1.png" alt="슬라이드아이콘1">
+                                        </a>
+                                        <span>130</span>
+                                    </div>
+                                    <div class="icon">
+                                        <a href="#">
+                                            <img src="./images/slideicon2.png" alt="슬라이드아이콘2">
+                                        </a>
+                                    </div>
+                                    <div class="icon">
+                                        <span class="heart">37</span>
+                                        <a href="javascript:void(0);" class="heart_btn">
+                                            <img src="./images/slideicon3.png" alt="슬라이드아이콘3">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide s s9">
+                                <div class="slideTop">
+                                    <img src="./images/profile9.png" alt="프로필1">
+                                    <div class="slide_box">
+                                        <span class="profile">네온시티 &nbsp;</span>
+                                        <span class="userid">NeonSeoul</span>
+                                        <span class="hour">ㆍ7h </span>
+                                        <span class="desc">New! 서울로 이주
+                                            <em>새로운 네온시티 서울에서 함께하세요</em>
+                                        </span>
+                                    </div>
+                                    <div class="slid_more">
+                                        <span class="more"></span>
+                                        <ul class="more_list">
+                                            <li><i class="fa-solid fa-user-plus"></i></li>
+                                            <li><i class="fa-solid fa-thumbtack"></i></li>
+                                        </ul>
+                                    </div>
+                                </div>
+                                <div class="slideCenter">
+                                    <a href="#">
+                                        <img src="./images/slide9.png" alt="슬라이드 이미지9">
+                                    </a>
+                                </div>
+                                <div class="slideBottom">
+                                    <div class="icon">
+                                        <a href="#">
+                                            <img src="./images/slideicon1.png" alt="슬라이드아이콘1">
+                                        </a>
+                                        <span>88</span>
+                                    </div>
+                                    <div class="icon">
+                                        <a href="#">
+                                            <img src="./images/slideicon2.png" alt="슬라이드아이콘2">
+                                        </a>
+                                    </div>
+                                    <div class="icon">
+                                        <span class="heart">60</span>
+                                        <a href="javascript:void(0);" class="heart_btn">
+                                            <img src="./images/slideicon3.png" alt="슬라이드아이콘3">
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </div>
+        </div>
+        <div class="signalPopup">
+            <div class="signalPopup_inner">
+                <div class="chatBox">
+                    <div class="chatHeader">
+                        <img class="profile_img" src="./images/profile.png" alt="프로필">
+                        <span class="chat_user">
+                            <img src="./images/slideicon2.png" alt="아이콘">
+                            musoonmom
+                        </span>
+                    </div>
+                    <div class="chatBody">
+                        <span class="msg left">
+                            오늘 오로라키즈카페 이벤트 하던데
+                            <em>로아랑 안이랑 같이갈래?</em>
+                        </span>
+                        <span class="msg right1">
+                            오, 좋은데?
+                        </span>
+                        <span class="msg left">
+                            아티팩트 챙겨와 들고 다니기 번거로어
+                        </span>
+                        <span class="msg right2">
+                            오키
+                        </span>
+                        <input type="text" class="chat_input" placeholder="메세지 입력">
+                    </div>
+                    <button class="chatClose" onclick="closeChat()">
+                        <i class="fa-solid fa-xmark"></i>
+                    </button>
+                </div>    
+            </div>
+        </div>
+        <div class="signal_Mfooter">
+            <span>© 2026 LUMINA. ALL RIGHTS RESERVED.
+                <em> LUMINA® IS A TRADEMARK OF LUMINA.</em>
+            </span>
+        </div>
+    </div>
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/matter-js/0.20.0/matter.min.js"></script>
+
+
+    <script>
+        //하트
+        $('.slideBox .slideBox_list .s .slideBottom .icon > .heart_btn').on('click', function () {
+            const $heart = $(this).siblings('.heart');
+            let count = parseInt($heart.text(), 10);
+
+            if ($(this).hasClass('on')) {
+                count--;
+                $(this).removeClass('on');
+            } else {
+                count++;
+                $(this).addClass('on');
+            }
+
+            $heart.text(count);
+        });
+
+
+        //더보기
+        document.querySelectorAll(".slid_more").forEach(function (btn) {
+            btn.addEventListener("click", function () {
+                this.classList.toggle("on");
+            });
+        });
+
+
+        //챗
+        function closeChat() {
+            document.querySelector(".signalPopup").classList.remove("show");
+        }
+        function openChat(){
+            document.querySelector(".signalPopup").classList.add("show");
+        }
+        document.addEventListener("keydown", function(e) {
+            if (e.key === "Escape") {
+                closeChat();
+            }
+        });
+
+
+        //스와이퍼  
+
+        document.addEventListener("DOMContentLoaded", function () {
+
+            // 안쪽 Swiper
+            const swiper2 = new Swiper(".mySwiper2", {
+                slidesPerView: 1,
+                spaceBetween: 0,
+                nested: true,
+                observer: true,
+                observeParents: true,
+                touchReleaseOnEdges: true,
+            });
+
+            // 바깥 Swiper
+            const swiper1 = new Swiper(".mySwiper", {
+                slidesPerView: 2,
+                spaceBetween: 50,
+
+                loop: true,
+
+                centeredSlides: false,
+
+                slidesOffsetBefore: 400,
+                slidesOffsetAfter: 100,
+
+                observer: true,
+                observeParents: true,
+
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+
+                autoplay: {
+                    delay: 3000,            
+                    disableOnInteraction: false, // 드래그 후에도 자동재생 유지
+                    pauseOnMouseEnter: true,     // 마우스를 올리면 일시정지 (선택)
+                },
+                speed: 1000, // 슬라이드 넘어가는 속도
+                breakpoints: {
+                    1600: {
+                        slidesPerView: 2,
+                        centeredSlides: false,
+                        slidesOffsetBefore: 400,
+                        slidesOffsetAfter: 200,
+                    },
+
+                    1400: {
+                        slidesPerView: 1,
+                        centeredSlides: true,
+                        slidesOffsetBefore: 200,
+                        slidesOffsetAfter: 100,
+                    },
+                    1040: {
+                        slidesPerView: 1,
+                        centeredSlides: true,
+                        slidesOffsetBefore: 100,
+                        slidesOffsetAfter:0,
+                    },
+                    780: {
+                        slidesPerView: 1,
+                        centeredSlides: false,
+                        slidesOffsetBefore: 50,
+                        slidesOffsetAfter:0,
+                    },
+                    480: {
+                        slidesPerView: 1,
+                        spaceBetween: 30,
+                        centeredSlides: false,
+                        slidesOffsetBefore: 0,
+                        slidesOffsetAfter:0,
+                    },
+                    0: {
+                        slidesPerView: 1,
+                        spaceBetween: 10,
+                        centeredSlides: false,
+                        slidesOffsetBefore: 0,
+                        slidesOffsetAfter:0,
+                    },
+                }
+
+            });
+
+        });
+
+        //로켓발사
+
+        const rocket = document.querySelector(".rocket");
+        const rotateGroup = document.querySelector(".rotateGroup");
+
+        rocket.addEventListener("click", () => {
+            rotateGroup.classList.toggle("active");
+        });
+
+
+    
+
+
+
+const Engine=Matter.Engine;
+const Render=Matter.Render;
+const Runner=Matter.Runner;
+const Bodies=Matter.Bodies;
+const Composite=Matter.Composite;
+
+const USER_RADIUS=35; // ⭐ 모바일 조절 : 프로필 크기
+const MAX_SPEED=1.5; // ⭐ 모바일 조절 : 최대 이동 속도
+const FLOAT_POWER=0.0008; // ⭐ 모바일 조절 : 둥둥 움직임
+const POINTER_RANGE=150; // ⭐ 모바일 조절 : 감속 시작 거리
+const PUSH_RANGE=70; // ⭐ 모바일 조절 : 튕김 시작 거리
+const PUSH_POWER=0.005; // ⭐ 모바일 조절 : 튕기는 힘
+const CIRCLE_RADIUS=580; // ⭐ 모바일 조절 : 움직이는 영역
+const TOP_LIMIT=700; // ⭐ 모바일 조절 : 위쪽 제한
+const RIGHT_LIMIT=580; // ⭐ 모바일 조절 : 오른쪽 제한
+
+
+const engine=Engine.create();
+
+engine.gravity.x=0;
+engine.gravity.y=0;
+
+
+const render=Render.create({
+
+    canvas:document.getElementById("physics"),
+
+    engine:engine,
+
+    options:{
+        width:1300,
+        height:1300,
+        wireframes:false,
+        background:"transparent"
+    }
+});
+
+
+Render.run(render);
+
+const runner=Runner.create();
+
+Runner.run(runner,engine);
+
+
+
+// ⭐ 프로필 추가는 여기만 추가
+// const users=[
+//     {name:"user1",img:"profile.png"},
+//     {name:"user2",img:"profile1.png"},
+//     {name:"user3",img:"profile2.png"},
+//     {name:"user4",img:"profile3.png"},
+//     {name:"user5",img:"profile4.png"},
+//     {name:"user6",img:"profile5.png"},
+//     {name:"user7",img:"profile6.png"},
+//     {name:"user8",img:"profile7.png"},
+//     {name:"user9",img:"profile8.png"},
+//     {name:"user10",img:"profile9.png"},
+// ];
+
+//대화창 오픈시 대화내용
+const users = [
+    {
+        name: "musoonmom",
+        img: "profile.png",
+        messages: [
+            { type: "left", text: "오늘 오로라키즈카페 이벤트 하던데", sub: "로아랑 안이랑 같이갈래?" },
+            { type: "right1", text: "오, 좋은데?" },
+            { type: "left", text: "아티팩트 챙겨와 들고 다니기 번거로어" },
+            { type: "right2", text: "오키" }
+        ]
+    },
+    {
+        name: "futuremoblirity",
+        img: "profile1.png",
+        messages: [
+            { type: "left", text: "미래학연구소 소식 봤는데", sub: "새 보고서 나왔대" },
+            { type: "right1", text: "오, 궁금하다" },
+            { type: "left", text: "미래 도시 내용도 있더라" },
+            { type: "right2", text: "봐야지" }
+        ]
+    },
+    {
+        name: "AuroraLibrary",
+        img: "profile2.png",
+        messages: [
+            { type: "left", text: "오로라 키즈도서관 가봤어", sub: "책 많더라" },
+            { type: "right1", text: "오, 좋아" },
+            { type: "left", text: "아이들 책 새로 들어왔대" },
+            { type: "right2", text: "가자" }
+        ]
+    },
+    {
+        name: "USF",
+        img: "profile3.png",
+        messages: [
+            { type: "left", text: "화성올림픽 경기 봤어", sub: "진짜 신기하더라" },
+            { type: "right1", text: "오, 봤어" },
+            { type: "left", text: "중력이 달라서 재밌더라" },
+            { type: "right2", text: "인정" }
+        ]
+    },
+    {
+        name: "RedPlanet",
+        img: "profile4.png",
+        messages: [
+            { type: "left", text: "레드플레넷 글 봤어", sub: "새 글 올라왔어" },
+            { type: "right1", text: "오, 그래?" },
+            { type: "left", text: "우주 정보 많아서 좋더라" },
+            { type: "right2", text: "오키" }
+        ]
+    },
+    {
+        name: "satlink",
+        img: "profile5.png",
+        messages: [
+            { type: "left", text: "궤도조정 작업 끝났어", sub: "문제 없었어?" },
+            { type: "right1", text: "응, 완료했어" },
+            { type: "left", text: "계산 엄청 어렵겠다" },
+            { type: "right2", text: "맞아" }
+        ]
+    },
+    {
+        name: "SpaceExpo",
+        img: "profile6.png",
+        messages: [
+            { type: "left", text: "우주전시회 준비됐어", sub: "기대된다" },
+            { type: "right1", text: "오 축하해" },
+            { type: "left", text: "새 기술도 볼 수 있대" },
+            { type: "right2", text: "좋다" }
+        ]
+    },
+    {
+        name: "cosmo_j",
+        img: "profile7.png",
+        messages: [
+            { type: "left", text: "화성 야경 봤어", sub: "너무 예쁘더라" },
+            { type: "right1", text: "응, 봤어" },
+            { type: "left", text: "별 보러 가고 싶다" },
+            { type: "right2", text: "가자" }
+        ]
+    },
+    {
+        name: "moon_daily",
+        img: "profile8.png",
+        messages: [
+            { type: "left", text: "식물구역 새로 열었대", sub: "가볼래?" },
+            { type: "right1", text: "오, 좋아" },
+            { type: "left", text: "희귀 식물 많다고 하더라" },
+            { type: "right2", text: "콜" }
+        ]
+    },
+    {
+        name: "NeonSeoul",
+        img: "profile9.png",
+        messages: [
+            { type: "left", text: "네온시티 서울 가봤어", sub: "야경 좋더라" },
+            { type: "right1", text: "오, 멋지다" },
+            { type: "left", text: "새로운 거리 생겼대" },
+            { type: "right2", text: "가자" }
+        ]
+    }
+];
+
+// 프로필 DOM 자동 생성
+const profileCircle=document.getElementById("profileCircle");
+
+users.forEach(user=>{
+    const div=document.createElement("div");
+    div.className="user";
+    div.innerHTML=`
+        <img src="./images/${user.img}">
+        <span>${user.name}</span>
+        <button class="messageBtn"><i class="fa-solid fa-envelope"></i></button>
+    `;
+    div.addEventListener("mouseenter",()=>{
+        div.classList.add("active");
+    });
+    div.addEventListener("mouseleave",()=>{
+        div.classList.remove("active");
+    });
+    profileCircle.appendChild(div);
+});
+
+const userEls=document.querySelectorAll(".user");
+const userBodies=[];
+
+users.forEach((user,index)=>{
+    const body=Bodies.circle(
+
+        250 + (index * 30) + (Math.random() * 140 - 70),
+        850 + (index * 15) + (Math.random() * 180 - 90),
+
+        USER_RADIUS,
+
+        {
+            restitution:1,
+            friction:0,
+            frictionAir:0.06,
+            slop:0.5
+        }
+    );
+
+    userBodies.push({
+
+        body:body,
+        el:userEls[index],
+        name:user.name
+
+    });
+
+    Composite.add(
+        engine.world,
+        body
+    );
+
+    Matter.Body.setVelocity(body,{
+        x:(Math.random()-0.5)*0.8,
+        y:(Math.random()-0.5)*0.8
+    });
+});
+
+
+// 마우스 / 터치 위치
+const pointer={
+    x:0,
+    y:0,
+    active:false
+};
+
+
+document.addEventListener("pointermove",(e)=>{
+    const rect=render.canvas.getBoundingClientRect();
+    pointer.x=e.clientX-rect.left;
+    pointer.y=e.clientY-rect.top;
+    pointer.active=true;
+});
+
+
+
+// 터치시 밀림
+document.addEventListener("pointerdown",(e)=>{
+    const rect=render.canvas.getBoundingClientRect();
+    const x=e.clientX-rect.left;
+    const y=e.clientY-rect.top;
+
+    userBodies.forEach(user=>{
+        const dx=user.body.position.x-x;
+        const dy=user.body.position.y-y;
+        const distance=Math.sqrt(dx*dx+dy*dy);
+
+        if(distance<PUSH_RANGE){
+            Matter.Body.applyForce(
+                user.body,
+                user.body.position,
+                {
+                    x:dx*PUSH_POWER,
+                    y:dy*PUSH_POWER
+                }
+            );
+        }
+    });
+});
+
+
+
+// 둥둥 + 감속 + 튕김
+Matter.Events.on(engine,"beforeUpdate",()=>{
+    userBodies.forEach(user=>{
+        const body=user.body;
+
+        // 기본 둥둥 움직임
+        Matter.Body.applyForce(
+            body,
+            body.position,
+            {
+                x:Math.sin(Date.now()*0.001+body.id)*FLOAT_POWER,
+                y:Math.cos(Date.now()*0.001+body.id)*FLOAT_POWER
+            }
+        );
+
+        if(pointer.active){
+            const dx=body.position.x-pointer.x;
+            const dy=body.position.y-pointer.y;
+            const distance=Math.sqrt(dx*dx+dy*dy);
+
+            // 가까우면 느려짐
+            if(distance<POINTER_RANGE){
+                Matter.Body.setVelocity(
+                    body,
+                    {
+                        x:body.velocity.x*0.88,
+                        y:body.velocity.y*0.88
+                    }
+                );
+            }
+
+            // ⭐ 가까우면 튕김
+            if(distance<PUSH_RANGE){
+                Matter.Body.applyForce(
+                    body,
+                    body.position,
+                    {
+                        x:(dx/distance)*PUSH_POWER,
+                        y:(dy/distance)*PUSH_POWER
+                    }
+                );
+            }
+        }
+
+        const speed=Math.sqrt(
+            body.velocity.x*body.velocity.x+
+            body.velocity.y*body.velocity.y
+        );
+
+        if(speed>MAX_SPEED){
+            Matter.Body.setVelocity(
+                body,
+                {
+                    x:(body.velocity.x/speed)*MAX_SPEED,
+                    y:(body.velocity.y/speed)*MAX_SPEED
+                }
+            );
+        }
+    });
+});
+
+
+
+// 위치 연결 + 영역 제한
+Matter.Events.on(engine,"afterUpdate",()=>{
+
+    userBodies.forEach(user=>{
+
+        const body=user.body;
+
+        const cx=650;
+        const cy=650;
+
+        const dx=body.position.x-cx;
+        const dy=body.position.y-cy;
+
+        const distance=Math.sqrt(dx*dx+dy*dy);
+
+        if(distance>CIRCLE_RADIUS){
+            const angle=Math.atan2(dy,dx);
+
+            Matter.Body.setPosition(body,{
+                x:cx+Math.cos(angle)*CIRCLE_RADIUS,
+                y:cy+Math.sin(angle)*CIRCLE_RADIUS
+            });
+
+            Matter.Body.setVelocity(body,{
+                x:-body.velocity.x*0.5,
+                y:-body.velocity.y*0.5
+            });
+        }
+
+
+        if(body.position.y<TOP_LIMIT){
+            Matter.Body.setPosition(body,{
+                x:body.position.x,
+                y:TOP_LIMIT
+            });
+        }
+
+        if(body.position.x>RIGHT_LIMIT){
+            Matter.Body.setPosition(body,{
+                x:RIGHT_LIMIT,
+                y:body.position.y
+
+            });
+
+        }
+        user.el.style.left=
+        body.position.x-USER_RADIUS+"px";
+        user.el.style.top=
+        body.position.y-USER_RADIUS+"px";
+    });
+});
+
+
+
+// 클릭시 메세지에 프로필이랑 대화교체
+
+const chatBody = document.querySelector(".chatBody");
+const profileImg = document.querySelector(".chatBox .chatHeader .profile_img");
+const chatUser = document.querySelector(".chatBox .chatHeader .chat_user");
+
+userBodies.forEach((user, index) => {
+
+    user.el.addEventListener("click", () => {
+
+        // 프로필 이미지 변경
+        profileImg.src = `./images/${users[index].img}`;
+
+        // 이름 변경
+        chatUser.innerHTML = `
+            <img src="./images/slideicon2.png" alt="아이콘">
+            ${users[index].name}
+        `;
+
+        // 기존 대화 삭제
+        chatBody.querySelectorAll(".msg").forEach(msg => {
+            msg.remove();
+        });
+
+        // 선택한 유저 대화 출력
+        users[index].messages.forEach(msg => {
+
+            const span = document.createElement("span");
+
+            span.className = `msg ${msg.type}`;
+
+            if (msg.sub) {
+                span.innerHTML = `
+                    ${msg.text}
+                    <em>${msg.sub}</em>
+                `;
+            } else {
+                span.textContent = msg.text;
+            }
+
+            chatBody.insertBefore(
+                span,
+                chatBody.querySelector(".chat_input")
+            );
+        });
+
+        openChat();
+    });
+
+});
+
+
+// 모바일 터치시 이름 표시
+userBodies.forEach(user=>{
+    user.el.addEventListener("pointerdown",(e)=>{
+        e.stopPropagation();
+        user.el.classList.toggle("active");
+    });
+});
+
+
+// 원호 벽
+function createWall(){
+    const walls=[];
+    const cx=650;
+    const cy=650;
+    const r=650;
+    for(let angle=180;angle<=270;angle+=5){
+        const rad=angle*Math.PI/180;
+        walls.push(
+            Bodies.rectangle(
+                cx+Math.cos(rad)*r,
+                cy+Math.sin(rad)*r,
+                80,
+                30,
+                {
+                    isStatic:true,
+                    angle:rad,
+                    render:{
+                    visible:false
+                    }
+                }
+            )
+        );
+    }
+    Composite.add(engine.world,walls);
+
+
+}
+
+
+createWall();
+
+
+
+
+
+
+   
+    </script>
+</body>
+</html>

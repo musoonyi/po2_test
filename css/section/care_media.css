@@ -1,0 +1,98 @@
+@charset "utf-8";
+@media (max-width: 1240px) {
+    .videoConsult_box {
+        width: 90vw;
+    }
+    .cameraArea {
+        width: 65vw;
+    }
+}
+@media (max-width: 900px) {
+    .videoConsult_box {
+        width: 96vw;
+        height: 450px;
+    }
+    .cameraArea {
+        width: 70vw;
+        height: 350px;
+    }
+}
+@media (max-width: 780px) {
+    .careSearch {
+        width: 80vw;
+        height: 60px;
+    }
+    .careSearch>input {
+        font-size: 22px;
+        width: 64%;
+        margin-left: 18%;
+    }
+    .careSearch .careSearch_btn {
+        width: 18%;
+    }
+    .careSearch .careSearch_btn i {
+        font-size: 24px;
+    }
+    
+    .careBrand {
+        top: 90px;
+    }
+    .careBrand .careBrand_list>li {
+        width: 400px;
+        height: 50px;
+    }
+    .careBrand .careBrand_list>li>button {
+        font-size: 20px;
+    }
+    .answerBox {
+        width: 65vw;
+    }
+    .answerText {
+        font-size: 20px;
+    }
+    
+}
+@media (max-width: 500px) {
+    .careSearch {
+            width: 90vw;
+    }
+    .careBrand .careBrand_list>li {
+        width: 350px;
+        height: 50px;
+    }
+}
+@media (max-width: 460px) {
+    .careSearch>input {font-size: 20px;}
+    .careSearch .careSearch_btn i {
+        font-size: 24px;
+    }
+    .careBrand .careBrand_list>li {
+        width: 300px;
+        height: 50px;
+    }
+    .careBrand .careBrand_list>li>button {
+        font-size: 18px;
+    }
+    .answerBox {
+        width: 300px;
+    }
+    .answerText {
+        font-size: 18px;
+        font-weight: 500;
+    }
+}
+@media (max-width: 380px) {
+    .careSearch {
+        width: 90vw;
+    }
+    .careBrand .careBrand_list>li {
+        width: 250px;
+    }
+    .answerBox {
+        width: 290px;
+    }
+    .videoLink {
+        font-size: 19px;
+        
+    }
+}

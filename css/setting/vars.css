@@ -1,0 +1,78 @@
+@charset "utf-8";
+
+:root {
+	--mainEng-font: "initial";
+	--mainKor-font: 'Suit';
+	--mainNum-font: "GMarketSans";
+
+	--bg-main: #dbdbdb;
+	--bg-nav: rgba(127, 157, 181, 0.7);
+
+	--subBg1: #F5F5F5; 
+	--subBg2: #131722;
+	--subBg3: #FEE2B8;
+
+	--subchip1: #FFFFFF;
+	--subchip2: #E6E6E6;
+	--subchip3: #C3BBB5;
+	--subchip4: #747474;
+
+	--subBtn:#23354A;
+
+	--btnBorder: #c8c8c8; 
+	
+	/* 2px */
+
+	--gray-900: #1C1C1C;
+	--gray-700: #3b3b3b;
+	--gray-600: #777777;
+	--gray-500: #AAAAAA;
+	--gray-400: #C8C8C8;
+	--gray-300: #d9d9d9;
+	--gray-100: #f5f5f5;
+
+    --b: #000;
+    --w: #fff;
+
+    --text1: #111;
+	--text2: #D9F9FF;
+	--text3 :#F8FDFF;
+
+    --textH1: #285172;
+    --textH2: #7F9DB5;
+    --textH3: #A4CAF3;
+	
+
+	--textC0: #0EEAFA;
+    --textC1: #FA0E0E;
+    --textC2: #837829;
+    --textC3: #E9D649;
+    --textC4: #008CFE;
+
+
+
+
+	/* 박스쉐도우 설정 */
+	--shadow-primary: 0 0 2px 2px var(--w);
+	--shadow: 0 0 5px 2.5px var(--w);
+	--shadow-soft: 0 12px 40px rgba(0, 0, 0, 0.08);
+
+
+	/* 기본 폰트 설정 */
+	font-family: var(--mainKor-font);
+	font-size: 20px;
+	line-height: 1.5;
+	font-weight: 400;
+
+	
+	/* 아이폰 가로 모드에서 글씨 확대 금지 */
+	-webkit-text-size-adjust: 100%;
+}
+
+@media (max-width: 800px) {
+	:root {
+		font-size: 18px;
+		line-height: 1.4;
+	}
+}
+
