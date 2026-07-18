@@ -7,20 +7,20 @@
 
 .payWrap{
     background-color: #111;
-    width: 100%;
-    height: 100vh;
-    overflow-x: hidden;
+    width:100%;
+    min-height:100vh;
+    height:auto;
+    overflow-x:hidden;
 }
 #payVideo{
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 0;
     filter: saturate(0.7) contrast(1.2) brightness(0.7);
     opacity: 1;
-    width: 100%;
-    height: inherit;
-    object-fit: cover;
+    position:fixed;
+    inset:0;
+    width:100%;
+    height:100%;
+    object-fit:cover;
+    z-index:0;
 }
 /* #payHeader */
 #payHeader{
@@ -564,7 +564,7 @@
     align-items: center;
     text-align: center;
     cursor: pointer;
-    margin-bottom: 20px;
+    margin-bottom: 25px;
 }
 .paymentInfo .infoBtn>li{
     width: 33.3%;
@@ -587,9 +587,6 @@
 .paymentInfo .infoContents .infoView{
     width: 100%;
 }
-.paymentInfo .infoContents .view1{display: block;}
-.paymentInfo .infoContents .view2{ display: none;}
-.paymentInfo .infoContents .view3{ display: none;}
 /* .viewList */
 /* 공통 */
 .infoView .viewList{
@@ -599,11 +596,13 @@
     width: 100%;
 }
 .infoView .viewList>li .view_tit{
+    width: 100%;
     font-size: 20px;
     font-weight: 800;
     margin-bottom: 5px;
 }
 .infoView .viewList>li .select{
+    width: 100%;
     display: flex;
     justify-content: space-between;
     border-bottom: 1px solid var(--gray-600);
@@ -612,9 +611,14 @@
 }
 .infoView .viewList>li:last-child .select{
     border-bottom: 0;
+    margin-bottom: 0;
+    /* padding-bottom: 0; */
 }
 
 /* 개별view1 */
+.paymentInfo .infoContents .view1 {
+        margin-top: -5px;
+}
 .view1 .viewList>li .sel1{}
 .view1 .viewList>li .sel1 .select_tit{
     font-size: 18px;
@@ -624,9 +628,6 @@
     font-size: 18px;
     font-weight: 400;
 }
-.view1 .viewList>li .sel1 .select_desc>span{}
-.view1 .viewList>li .sel1 .select_desc>span .cl{}
-.view1 .viewList>li .sel1 .select_desc>span .si{}
 /* .sel2 */
 .view1 .viewList>li .sel2{
     display: flex;
@@ -637,9 +638,9 @@
     font-weight: 400;
 }
 .view1 .viewList>li .sel2>span{
+    width: 100%;
     display: flex;
     justify-content: space-between;
-    width: 100%;
     line-height: 1.8;
 }
 .view1 .viewList>li .sel2>span>em{}
@@ -650,22 +651,41 @@
 
 /* .sel3 */
 .view1 .viewList>li .sel3{
+    width: 100%;
     display: flex;
-    justify-content: space-between;
-    flex-direction: column;
+    flex-wrap: wrap;
     font-size: 18px;
     font-weight: 400;
 }
 .view1 .viewList>li .sel3>span{
-    display: flex;
-    justify-content: space-between;
+    width: 100%;
     margin-bottom: 5px;
+    display: flex;
+}
+.view1 .viewList>li .sel3 .col_header{
+    display: block;
+    min-width: 90px;
+}
+.view1 .viewList>li .sel3>span .put{
+    width: 100%;
+    border-radius: 7px;
+    outline: none;
+    border: 1px solid var(--gray-300);
+    padding: 7px 15px;
 }
 .view1 .viewList>li .sel3 .AddressLine1{
-    position: relative;
-    display: block;
+    width: 100%;
 }
-.view1 .viewList>li .sel3 .AddressLine1 >button>i{
+.view1 .viewList>li .sel3 .AddressLine1 .Line1box{
+    position: relative;
+    display: flex;
+    width: calc(100% - 90px);
+}
+.view1 .viewList>li .sel3 .AddressLine1 .Line1box .line1{
+    width: 100%;
+}
+.view1 .viewList>li .sel3 .AddressLine1 .Line1box >button{}
+.view1 .viewList>li .sel3 .AddressLine1 .Line1box >button>i{
     position: absolute;
     top: 50%;
     right: 15px;
@@ -674,20 +694,12 @@
     color: var(--gray-500);
     cursor: pointer;
     transition: 0.3s;
+    z-index: 5;
 }
-.view1 .viewList>li .sel3 .AddressLine1 >button>i:hover{
+.view1 .viewList>li .sel3 .AddressLine1 .Line1box >button>i:hover{
     color: var(--gray-700);
 }
-.view1 .viewList>li .sel3>span .put{
-    width: 390px;
-    border-radius: 7px;
-    outline: none;
-    border: 1px solid var(--gray-300);
-    padding: 7px 15px;
-}
-.view1 .viewList>li .sel3>span .line1{
-    transform: translateX(42px);
-}
+
 
 /* 개별view2 */
 .view2{}
@@ -727,7 +739,7 @@
 .view3 .viewList{}
 .view3 .viewList>li{
     width: 100%;
-    height: 430px;
+    height: 425px;
     border: 1px solid var(--gray-600);
     border-radius: 7px;
     padding: 25px;
