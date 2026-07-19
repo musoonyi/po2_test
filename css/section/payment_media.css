@@ -311,7 +311,7 @@
     }
  }
     @media(max-width:460px){
-    .view3 .viewList>li .enter1>em{
+    .view3 .viewList>li >span>em{
         display: block;
     }
     }
@@ -355,8 +355,6 @@
         font-size: 12px;
         display: flex;
         align-items: center;
-    }
-    .view2 .viewList>li {
     }
     .view2 .viewList>li:last-child {
         padding: 15px;

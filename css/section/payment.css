@@ -911,7 +911,7 @@
 .adtext p,
 .adtext p span{
     font-size: 19px;
-    font-weight: 300;
+    font-weight: 400;
     font-family: var(--mainNum-font);
     color: var(--w);
     display: block;
