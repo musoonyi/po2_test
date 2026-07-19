@@ -1,0 +1,402 @@
+@charset "utf-8";
+
+/*  */
+@media(max-width:1890px){
+    .payWrap{
+        width: 100%;
+        height: auto;
+    }
+    #payVideo {
+        width: 100%;
+        height: 100%;
+    }
+    .payHeader_inner {
+        padding: 0 5vw;
+    }
+    .payNav_inner {
+        padding: 15px 5vw;
+    }
+    .payment_inner{
+        width: 100%;
+    }
+    .paymentInfo .infoContents {
+        padding: 0 30px;
+    }
+}
+@media(max-width:1640px){
+    .payHeader_inner {
+        padding: 0 2vw;
+    }
+    .payNav_inner {
+        padding: 15px 2vw;
+    }
+}
+@media(max-width:1500px){
+    .payHeader_inner {
+        padding: 0 2vw;
+    }
+    .payNav_inner {
+        padding: 15px 2vw;
+    }
+    .payItem {
+        width: 100%;
+    }
+    .itemContain{
+        flex-direction: column;
+    }
+    .item_detail{
+        border: 0;
+        padding: 0;
+    }
+    .item_detail .item_list{
+        display: flex;
+        justify-content: space-between;
+        width: 510px;
+        border: 1px solid #c8c8c8;
+        border-bottom: 0;
+        padding: 20px 20px 0 20px;
+    }
+    .item_detail .item_list>li{
+        width: 30%;
+        height: 140px;
+    }
+    .item_detail .item_list>li>img{
+        transform: scale(0.7);
+    }
+    .item_view {
+        width: 510px;
+        height: auto;
+    }
+    .item_view .itembg {
+        height: 460px;
+    }
+    .item_view .itembg>img{
+        transform: scale(0.75);
+    }
+    .slideAD{margin-top: 14px;}
+}
+@media(max-width:1280px){
+    .payArea {
+        margin-right: 0;
+    }
+    .payContain {
+        width: 100%;
+        flex-wrap: wrap;
+        margin: 0 auto;
+        padding: 0;
+    }
+    .payItem {
+        width: 50%;
+        width: 510px;
+    }
+    .payArea{
+        width: 45%;
+    }
+    .slideAD{
+        width: 100%;
+        max-width: 1080px;
+        height: 260px;
+        z-index: 20;
+        margin-top: 20px;
+    }
+    .slideAD_inner{
+        width: 100%;
+        height: 260px;
+    }
+    .swiper-slide{
+        justify-content: start;
+        padding-left: 7%;
+    }
+    .adslide1 .adBtn1{
+        margin-left: 35%;
+    }
+    .adslide2 .adBtn2{
+        margin-left: 40%;
+    }
+    .adslide3 .adBtn3{
+        margin-left: 20%;
+     }
+    .parallax-bg{
+        filter: saturate(0.7);
+    }
+    .bg1{ background-image:url(../../images/ad1_1.png); 
+    background-position: center;}
+    .bg2{ background-image:url(../../images/ad2_2.jpg);
+    background-position: bottom;}
+    .bg3{ background-image:url(../../images/ad3_3.jpg); }
+    .adtitle,
+    .adtext,
+    .adBtn{
+        position: absolute;
+        z-index: 2;
+        text-align: left;
+    }
+    .adtext p,
+    .adtext p span{
+        display: inline;
+    }
+    .adtitle1,
+    .adtitle2,
+    .adtitle3{
+        top: 40px;
+    }
+    .adtext1,
+    .adtext2,
+    .adtext3{
+        top: 100px;
+        letter-spacing: 2px;
+    }
+    .adBtn1,
+    .adBtn2,
+    .adBtn3{
+        top: 160px;
+    }
+}
+@media(max-width:1040px){
+    .payWrap{
+        height: 100%;
+    }
+    .payContain{
+        width: 100%;
+    }
+    .payItem {
+        width: 700px;
+        height: auto;
+        margin-right: 0;
+        margin-top: 30px;
+    }
+    .payItem_inner {
+        width: 100%;
+    }
+    .itemContain {
+        width:100%;
+        justify-content: center;
+    }
+    .item_detail {
+        width: 100%;
+        height: auto;
+    }
+    .item_detail .item_list {
+        width: 100%;
+    }
+    .item_detail .item_list>li{
+        width: 200px;
+        height: 200px;
+    }
+    .item_detail .item_list>li>img {
+        transform: scale(1);
+    }
+    .item_view {
+        width: 100%;
+        height: auto;
+    }
+    .item_view .itembg {
+        width: 90%;
+        height: 640px;
+        margin: 0 auto 20px auto;
+    }
+    .item_view .item_info {
+        width: 90%;
+        margin: 0 auto;
+    }
+    .item_view .itembg>img {
+        transform: scale(1);
+    }
+    .payArea{
+        width: 700px;
+        margin-top: 30px;
+    }
+    
+}
+@media (max-width: 800px) {
+	:root {
+		font-size: 18px;
+		line-height: 1.5;
+	}
+}
+@media(max-width:760px){
+    .payContain {
+        width: 100%;
+        margin: auto;
+        height: auto;
+    }
+    .item_detail .item_list>li {
+        width: 31%;
+        height: 35vw;
+    }
+    .payArea {
+        width: 100%;
+    }
+    .slideAD{
+        border: 0;
+        margin-top: 0;
+    }
+}
+ @media(max-width:600px){
+    .payItem {
+        margin-top: 0;
+        height: auto;
+    }
+    .payArea {
+        margin-top: 20px;
+    }
+    .item_detail .item_list>li>img {
+        transform: scale(0.9);
+    }
+    .item_view {
+        position: relative;
+        padding: 20px ;
+        border: 0;
+    }
+    .item_view::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 1px solid #fff;
+        width: 90%;
+        height: 100%;
+    }
+    .item_view .itembg {
+        position: relative;
+        height: 500px;
+        background-color: rgba(255,255,255,0.5);
+        border-radius: 7px;
+        border-top: 2px solid var(--w);
+        border-bottom: 2px solid var(--w);
+    }
+    .item_view .itembg>img {
+        transform: scale(0.85);
+    }
+    .item_detail .item_list{
+        border: 0;
+    }
+    
+}
+ @media(max-width:480px){
+    #payHeader {
+        margin-top: 20px;
+        height: auto;
+    }
+    .payHeader_logo {
+        width: 300px;
+        height: auto;
+    }
+    .item_detail .item_list>li>img {
+        transform: scale(0.7);
+    }
+    .item_info .itemBox .tech_list li { width: 60%;}
+  
+    .item_delivery .roketcircle {
+        width: 300px;
+        height: 300px;
+    }
+    .adtext p,
+    .adtext p span{
+        display: block;
+    }
+    .adBtn2{
+        top: 180px;
+    }
+    .deliText::before {
+        font-size: 30px;
+    }
+    .deliBox .delivery_tit {
+        font-size: 16px;
+    }
+    .view1 .viewList>li .sel1 .select_tit{
+        font-size: 16px;
+    }
+    .view1 .viewList>li .sel1 .select_desc{
+        font-size: 16px;
+    }
+    .view1 .viewList>li .sel2>span{
+        font-size: 16px;
+    }
+    .view1 .viewList>li .sel3>span{
+        font-size: 16px;
+    }
+    .view2 .viewList>li {
+        padding: 13px 25px;
+    }
+    .view2 .viewList>li>span {
+        font-size: 14px;
+    }
+    .view3 .viewList>li {
+        height: 410px;
+    }
+    .payment_inner {
+        height: 660px;
+    }
+    .paymentBtn .finishBtn >a {
+        font-size: 16px;
+    }
+ }
+    @media(max-width:460px){
+    .view3 .viewList>li >span>em{
+        display: block;
+    }
+    }
+    @media(max-width:380px){
+    .payNav_list>li {
+        margin-right: 5px;
+    }
+    .item_detail .item_list>li {
+        height: 100px;
+    }
+    .item_detail .item_list>li>img {
+        transform: scale(0.5);
+    }
+    .item_view .itembg {
+        height: 400px;
+    }
+    .item_view .itembg>img {
+        transform: scale(0.65);
+    }
+    .item_info .itemBox .title {
+        font-size: 30px;
+        margin-bottom: 5px;
+    }
+    .item_info .itemBox .desc {
+        font-size: 16px;
+        margin-bottom: 15px;
+    }
+    .item_option {
+        height: 620px;
+    }
+    .item_option .item_tit {
+        font-size: 32px;
+    }
+    .item_option .item_select .selectBox button {
+        margin: 5px 5px 5px 0;
+    }
+    .item_option .item_select .Qty_box .qty .num {
+        margin: 5px 0;
+    }
+    .view1 .viewList>li .sel1 .select_desc {
+        font-size: 12px;
+        display: flex;
+        align-items: center;
+    }
+    .view2 .viewList>li:last-child {
+        padding: 15px;
+    }
+     .view3 .viewList>li {
+        height: 410px;
+    }
+    .item_delivery .roketcircle {
+        width: 265px;
+        height: 265px;
+    }
+    .paymentTop {
+        padding: 15px;
+    }
+    .payment_inner {
+        height: 640px;
+    }
+    .paymentBtn .finishBtn >a {
+        font-size: 13px;
+    }
+    
+  }
