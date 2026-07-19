@@ -191,12 +191,12 @@
         height: auto;
     }
     .item_view .itembg {
-        width: 95%;
+        width: 90%;
         height: 640px;
         margin: 0 auto 20px auto;
     }
     .item_view .item_info {
-        width: 95%;
+        width: 90%;
         margin: 0 auto;
     }
     .item_view .itembg>img {
@@ -216,7 +216,7 @@
 }
 @media(max-width:760px){
     .payContain {
-        width: 94%;
+        width: 100%;
         margin: auto;
         height: auto;
     }
@@ -227,6 +227,10 @@
     .payArea {
         width: 100%;
     }
+    .slideAD{
+        border: 0;
+        margin-top: 0;
+    }
 }
  @media(max-width:600px){
     .payItem {
@@ -236,18 +240,50 @@
     .payArea {
         margin-top: 20px;
     }
+    .item_detail .item_list>li {
+        position: relative;
+    }
+    .item_detail .item_list>li::before {
+        content: "";
+        position: absolute;
+        bottom: -20px;
+        left: 50%;
+        transform: translateX(-50%);
+        width: 2px;
+        height: 20px;
+        background-color: #fff;
+    }
     .item_detail .item_list>li>img {
         transform: scale(0.9);
     }
     .item_view {
+        position: relative;
         padding: 20px ;
+        border: 0;
+    }
+    .item_view::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        border: 1px solid #fff;
+        width: 93%;
+        height: 100%;
     }
     .item_view .itembg {
-        width: 100%;
+        position: relative;
         height: 500px;
+        background-color: rgba(255,255,255,0.5);
+        border-radius: 7px;
+        border-top: 2px solid var(--w);
+        border-bottom: 2px solid var(--w);
     }
     .item_view .itembg>img {
         transform: scale(0.85);
+    }
+    .item_detail .item_list{
+        border: 0;
     }
     
 }
