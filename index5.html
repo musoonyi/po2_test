@@ -448,51 +448,69 @@
         });
 
   
-        //수량추가삭제    
+
+        //수량변경과 가격변동
+        let count = 1;
         let timer;
-        let hold = false;
-        // +
-        $(".p").on("mousedown", function(){
-            let btn = $(this);
-            hold = false;
-            // 바로 1 증가
-            let num = Number(btn.siblings(".num").text());
-            btn.siblings(".num").text(num + 1);
-            // 0.5초 후 연속 증가
-            timer = setTimeout(function(){
-                hold = true;
 
-                timer = setInterval(function(){
-                    let num = Number(btn.siblings(".num").text());
-                    btn.siblings(".num").text(num + 1);
-                }, 100);
+        // 수량과 가격 업데이트
+        function changeQty(value){
+            count += value;
 
-            }, 500);
-        });
-        // -
-        $(".m").on("mousedown", function(){
-            let btn = $(this);
-            hold = false;
-            // 바로 1 감소
-            let num = Number(btn.siblings(".num").text());
-            if(num > 1){
-                btn.siblings(".num").text(num - 1);
+            // 최소 수량 1개
+            if(count < 1){
+                count = 1;
             }
-            // 0.5초 후 연속 감소
-            timer = setTimeout(function(){
-                hold = true;
-                timer = setInterval(function(){
-                    let num = Number(btn.siblings(".num").text());
 
-                    if(num > 1){
-                        btn.siblings(".num").text(num - 1);
-                    }
-                }, 100);
-            }, 500);
+            // 수량 표시
+            $(".num").text(count);
+
+            // 상품 금액
+            let price = 2390000 * count;
+
+            // 할인 적용 금액
+            let total = price - 150000;
+
+            // 금액 표시
+            $(".account").text("₩" + price.toLocaleString());
+            $(".lastAccount").text("₩" + total.toLocaleString());
+        }
+
+        // + 버튼
+        $(".p").on("mousedown", function(){
+
+            // 바로 1 증가
+            changeQty(1);
+
+            // 0.5초 후 길게 누르면 연속 증가
+            timer = setTimeout(function(){
+
+                timer = setInterval(function(){
+                    changeQty(1);
+                },100);
+
+            },500);
+
         });
 
+        // - 버튼
+        $(".m").on("mousedown", function(){
 
-        // 손 떼면 멈춤
+            // 바로 1 감소
+            changeQty(-1);
+
+            // 0.5초 후 길게 누르면 연속 감소
+            timer = setTimeout(function(){
+
+                timer = setInterval(function(){
+                    changeQty(-1);
+                },100);
+
+            },500);
+
+        });
+
+        // 마우스를 떼거나 버튼 밖으로 나가면 연속 증가/감소 종료
         $(".p, .m").on("mouseup mouseleave", function(){
 
             clearTimeout(timer);
@@ -500,49 +518,10 @@
 
         });
 
-
-        //상품추가시 결제창에 가격변동
-        let count = 1;
-        // +
-        $(".p").click(function(){
-            count++;
-            $(".num").text(count);
-            $(".account").text("₩" + (2390000 * count).toLocaleString());
+        // 클릭 시 mousedown과 중복 실행되는 것 방지
+        $(".p, .m").on("click", function(e){
+            e.preventDefault();
         });
-        // -
-        $(".m").click(function(){
-            if(count > 1){
-                count--;
-                $(".num").text(count);
-                $(".account").text("₩" + (2390000 * count).toLocaleString());
-            }
-        });
-
-
-        // +
-        $(".p").click(function(){
-            count++;
-            $(".num").text(count);
-            let price = 2390000 * count;
-            let total = price - 150000;
-            $(".account").text("₩" + price.toLocaleString());
-            $(".lastAccount").text("₩" + total.toLocaleString());
-
-        });
-
-        // -
-        $(".m").click(function(){
-            if(count > 1){
-                count--;
-                $(".num").text(count);
-                let price = 2390000 * count;
-                let total = price - 150000;
-                $(".account").text("₩" + price.toLocaleString());
-                $(".lastAccount").text("₩" + total.toLocaleString());
-            }
-        });
-
-
 
 
 
