@@ -49,6 +49,10 @@
 }
 
 @media(max-width:1240px){
+    .skillWrap {
+    width: 100%;
+    height: auto;
+    }
     .page_list .swiper-slide .F{
         flex-direction: column;
         align-items: center;
