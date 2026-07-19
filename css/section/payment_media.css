@@ -240,19 +240,6 @@
     .payArea {
         margin-top: 20px;
     }
-    .item_detail .item_list>li {
-        position: relative;
-    }
-    .item_detail .item_list>li::before {
-        content: "";
-        position: absolute;
-        bottom: -20px;
-        left: 50%;
-        transform: translateX(-50%);
-        width: 2px;
-        height: 20px;
-        background-color: #fff;
-    }
     .item_detail .item_list>li>img {
         transform: scale(0.9);
     }
@@ -268,7 +255,7 @@
         left: 50%;
         transform: translateX(-50%);
         border: 1px solid #fff;
-        width: 93%;
+        width: 90%;
         height: 100%;
     }
     .item_view .itembg {
