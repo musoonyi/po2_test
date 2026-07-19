@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment</title>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/all.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="./css/section/payment2.css">
+    <link rel="stylesheet" href="./css/section/payment_media2.css">
+    <link rel="icon" href="./images/icon.png">
+</head>
+
+    <div class="payWrap">
+        <video autoplay muted loop id="payVideo" >
+            <source src="./images/444.mp4" type="video/mp4">
+        </video>
+        <header id="payHeader">
+            <div class="payHeader_inner">
+                <h1 class="payHeader_logo">
+                    <a href="./index1.html">
+                        <img src="./images/logoSuit_w.png" alt="수트로고이미지">
+                    </a>
+                </h1>
+            </div>
+        </header>
+        <nav class="payNav">
+            <div class="payNav_inner">
+                <ul class="payNav_list">
+                    <li><a href="./index.html">홈</a></li>
+                    <li>></li>
+                    <li><a href="./index1.html">컬렉션</a></li>
+                    <li>></li>
+                    <li><a href="./index6.html" target="_blank">에이펙스 라이트 슈트</a></li>
+                </ul>
+            </div>
+        </nav>
+        <div class="payContain">
+            <section class="payItem">
+                <div class="payItem_inner">
+                    <div class="itemContain">
+                        <div class="item_detail">
+                            <ul class="item_list">
+                                <li data-img="./images/item9.png">
+                                    <img src="./images/itemlist7.png" alt="아이템리스트1">
+                                </li>
+                                <li data-img="./images/itemback3.png">
+                                    <img src="./images/itemlist8.png" alt="
+                                    아이템리스트2">
+                                </li>
+                                <li data-img="./images/itemback3.png">
+                                    <img src="./images/itemlist9.png" alt="
+                                    아이템리스트3">
+                                </li>
+                            </ul>
+                        </div>
+                        <div class="item_view">
+                            <div class="itembg">
+                                <img src="./images/item9.png" alt="아이템1">
+                                <div class="hover top" data-index="0"></div>
+                                <div class="hover middle" data-index="1"></div>
+                                <div class="hover bottom" data-index="2"></div>
+                            </div>
+                            <div class="item_info">
+                                <h4 class="info_tit"> PRODUCT INFO</h4>
+                                <div class="itemBox"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <div class="payArea">
+                <section class="payOption">
+                    <div class="payOption_inner">
+                        <div class="itemTop">
+                            <article class="item_option">
+                                <h3 class="item_tit">
+                                    에이펙스 라이트 슈트
+                                </h3>
+                                <ul class="item_select">
+                                    <li class="price">₩2,580,000</li>
+                                    <li class="star">
+                                        <img src="./images/star.png" alt="별이미지">
+                                        <em>4.7(1080)</em>
+                                    </li>
+                                    <li class="selectBox size_box">
+                                        <h5>SIZE</h5>
+                                        <button class="active">XS</button>
+                                        <button>S</button>
+                                        <button>M</button>
+                                        <button>L</button>
+                                        <button>XL</button>
+                                    </li>
+                                    <li class="selectBox color_box">
+                                        <H5>COLOR</H5>
+                                        <span class="col col1 active" data-color="퓨어화이트" data-img="./images/item9.png"></span>
+                                        <span class="col col2" data-color="실버그레이" data-img="./images/item10.png"></span>
+                                        <span class="col col3" data-color="스톤베이지" data-img="./images/item11.png"></span>
+                                        <span class="col col4" data-color="카본그레이"
+                                        data-img="./images/item12.png"></span>
+                                    </li>
+                                    <li class="selectBox Qty_box">
+                                        <H5>QTY</H5>
+                                        <div class="qty">
+                                            <button class="m">-</button>
+                                            <div class="num">1</div>
+                                            <button class="p">+</button>
+                                        </div>
+                                    </li>
+                                </ul>
+                                <div class="item_btn">
+                                    <button class="Addcart">장바구니 담기</button>
+                                    <button class="Buynow">바로 결제하기</button>
+                                </div>
+                            </article>
+                        </div>
+                        <div class="itemButtom">
+                            <article class="item_delivery">
+                                <div class="roketcircle">
+                                    <img src="./images/road.png" alt="로켓이미지">
+                                </div>
+                                <div class="deliBox">
+                                    <div class="deliText"></div>
+                                    <h4 class="delivery_tit">DELIVERY INFO</h4>
+                                </div>
+                            </article>
+                            <article class="textAD"></article>
+                        </div>
+                    </div>
+                </section>
+                <section class="payment">
+                    <div class="payment_inner">
+                        <div class="paymentTop">
+                            <h3 class="payment_tit">주문/결제</h3>
+                            <img src="./images/payicon.png" alt="주문/결제보안아이콘" class="payment_icon">
+                        </div>
+                        <div class="paymentCenter">
+                            <div class="paymentInfo">
+                                <ul class="infoBtn">
+                                    <li class="Btn1 active">01.주문정보</li>
+                                    <li class="Btn2">02.결제방법</li>
+                                    <li class="Btn3">03.주문완료</li>
+                                </ul>
+                                <div class="infoContents">
+                                    <article class="infoView view1">
+                                        <ul class="viewList">
+                                            <li>
+                                                <h4 class="view_tit">주문상품</h4>
+                                                <div class="select sel1">
+                                                    <p class="select_tit">
+                                                        에이펙스 라이트 슈트
+                                                    </p>
+                                                    <p class="select_desc">
+                                                        <span>색상: <em class="cl">화이트</em></span>
+                                                        <span> > </span>
+                                                        <span>사이즈: <em class="si">M</em></span>
+                                                    </p>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <h4 class="view_tit">주문금액</h4>
+                                                <div class="select sel2">
+                                                    <span class="item_price">
+                                                        상품금액 <em class="account">₩2,580,000</em>
+                                                    </span>
+                                                    <span class="shipping">
+                                                        배송비 <em>무료</em>
+                                                    </span>
+                                                    <span class="sale">
+                                                        할인금액 <em class="saleAccount">-₩90,000</em>
+                                                    </span>
+                                                </div>
+                                            </li>
+                                            <li>
+                                                <h4 class="view_tit">배송정보</h4>
+                                                <div class="select sel3">
+                                                    <span class="Recipient">
+                                                        <em class="col_header">받는사람</em>
+                                                        <input type="text" class="put name" placeholder="이름을 입력해주세요">
+                                                    </span>
+                                                    <span class="phon">
+                                                        <em class="col_header">연락처</em>
+                                                        <input type="text" class="put num" placeholder="-없이 숫자만 입력해주세요">
+                                                    </span>
+                                                    <span class="AddressLine1">
+                                                        <em class="col_header">주소</em>
+                                                        <div class="Line1box">
+                                                            <input type="text" id="address" class="put line1" placeholder="주소검색" readonly>
+                                                            <button type="button" id="searchAddress"><i class="fa-solid fa-magnifying-glass"></i></button>
+                                                        </div>
+                                                    </span>
+                                                    <span class="AddressLine2">
+                                                        <em class="col_header">상세주소</em>
+                                                        <input type="text" class="put line2" placeholder="상세 주소를 입력해주세요">
+                                                    </span>
+                                                </div>
+                                            </li>
+                                        </ul>
+                                    </article>
+                                    <article class="infoView view2">
+                                        <ul class="viewList">
+                                            <li><a href="#">신용카드 / 체크카드</a></li>
+                                            <li><a href="#">간편결제</a></li>
+                                            <li><a href="#">가상자산</a></li>
+                                            <li><a href="#">은행송금</a></li>
+                                            <li><a href="#">우주통신 아티팩트</a>
+                                                <span>통신 아티팩트를 기기에 연결하여 결제합니다.</span>
+                                            </li>
+                                        </ul>
+                                    </article>
+                                    <article class="infoView view3">
+                                        <ul class="viewList">
+                                            <li>
+                                                <p>주문이 완료되었습니다.</p>
+                                                <span class="enter1">상품 준비가 시작되면 <em>우주배송으로 발송됩니다.</em></span>
+                                                <span class="enter2">배송 현황은 주문 내역에서 <em>언제든지 확인하실 수 있습니다.</em></span>
+                                            </li>
+                                        </ul>
+                                    </article>
+                                </div>                
+                            </div>
+                        </div>
+                        <div class="paymentBottom">
+                            <article class="paymentBtn">
+                                    <div class="nextBtn">
+                                        <button class="close">
+                                            <i class="fa-solid fa-xmark"></i>
+                                        </button>
+                                        <a href="#" class="nowAccount">
+                                            <span><em class="lastAccount">₩2,580,000 </em>결제하기</span>
+                                        </a>
+                                        <button class="next">
+                                            <img src="./images/checkout.png" alt="결제아이콘">
+                                        </button>
+                                    </div>
+                                    <div class="finishBtn">
+                                        <a href="#">
+                                            THANK YOU FOR USING LUMINA
+                                        </a>
+                                        <button class="out">
+                                            <img src="./images/checkout.png" alt="닫기아이콘">
+                                        </button>
+                                    </div>
+                            </article>
+                        </div>
+                    </div>
+                </section>
+            </div>
+            <section class="slideAD">
+                <div class="slideAD_inner">
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <div class="swiper-slide adslide1">
+                                <div class="parallax-bg bg1" data-swiper-parallax="-20%">
+                                </div>
+                                <div class="adtitle adtitle1" data-swiper-parallax="-300">우주에서 놀자!</div>
+                                <div class="adtext adtext1" data-swiper-parallax="-200">
+                                    <p>
+                                        아이들의 상상력 쑥쑥
+                                        <span>신나는 우주 키즈카페</span>
+                                    </p>
+                                </div>
+                                <a href="#" class="adBtn adBtn1" data-swiper-parallax="-100">자세히보기</a>
+                            </div>
+                            <div class="swiper-slide adslide2">
+                                <div class="parallax-bg bg2" data-swiper-parallax="-20%">
+                                </div>
+                                <div class="adtitle adtitle2" data-swiper-parallax="-300">ARES-V</div>
+                                <div class="adtext adtext2" data-swiper-parallax="-200">
+                                    <p>
+                                        -V와 함께
+                                        <span>당신의 첫번째 행성</span>
+                                        <span>여행이 시작됩니다</span>
+                                    </p>
+                                </div>
+                                <a href="#" class="adBtn adBtn2" data-swiper-parallax="-100">자세히보기</a>
+                            </div>
+                            <div class="swiper-slide adslide3">
+                                <div class="parallax-bg bg3" data-swiper-parallax="-20%">
+                                </div>
+                                <div class="adtitle adtitle3" data-swiper-parallax="-300">Lumina <em>Signer</em></div>
+                                <div class="adtext adtext3" data-swiper-parallax="-200">
+                                    <p>
+                                        새로운 우주 커뮤니티
+                                        <span>지금 바로 링크하세요!</span>
+                                    </p>
+                                </div>
+                                <a href="./index2.html" class="adBtn adBtn3" target="_blank" data-swiper-parallax="-100">자세히보기</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+    </div>
+<body>
+    
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@14.0.1/swiper-bundle.min.js"></script>
+    <script src="https://t1.daumcdn.net/mapjsapi/bundle/postcode/prod/postcode.v2.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollTrigger.min.js"></script>
+
+
+    <script>
+            
+        let current = 0;
+
+        // 탭
+        $(".infoView").hide().eq(current).show();
+        $(".infoBtn li").removeClass("active").eq(current).addClass("active");
+        $(".finishBtn").hide();
+
+        $(".infoBtn li").click(function(){
+
+            current = $(this).index();
+
+            $(".infoBtn li").removeClass("active");
+            $(this).addClass("active");
+
+            $(".infoView").hide().eq(current).fadeIn(300);
+
+            if(current == 2){
+                $(".nextBtn").hide();
+                $(".finishBtn").fadeIn(300);
+            }else{
+                $(".nextBtn").show();
+                $(".finishBtn").hide();
+            }
+
+        });
+
+        // 열기
+        $(".Buynow").click(function(e){
+            e.preventDefault();
+
+            current = 0;
+
+            $(".payment").addClass("active");
+            $(".infoBtn li").removeClass("active").eq(current).addClass("active");
+            $(".infoView").hide().eq(current).show();
+
+            $(".nextBtn").show();
+            $(".finishBtn").hide();
+        });
+
+        // 다음
+        $(".next").click(function(e){
+            e.preventDefault();
+
+            if(current < $(".infoView").length - 1){
+
+                current++;
+
+                $(".infoBtn li").removeClass("active").eq(current).addClass("active");
+                $(".infoView").hide().eq(current).fadeIn(300);
+
+                if(current == 2){
+                    $(".nextBtn").hide();
+                    $(".finishBtn").fadeIn(300);
+                }
+
+            }
+        });
+
+        // 닫기
+        $(".nextBtn .close, .finishBtn .out").click(function(e){
+            e.preventDefault();
+            $(".payment").removeClass("active");
+        });
+
+        // ESC
+        $(document).keydown(function(e){
+            if(e.key == "Escape"){
+                $(".payment").removeClass("active");
+            }
+        });
+
+
+        // 결제창 열기
+        $(".Buynow").click(function(e){
+            e.preventDefault();
+            $(".payment").addClass("active");
+        });
+
+        // 결제창 닫기 (X 버튼)
+        $(".nextBtn .close").click(function(e){
+            e.preventDefault();
+            $(".payment").removeClass("active");
+        });
+
+        // ESC 키로 닫기
+        $(document).keydown(function(e){
+            if (e.key === "Escape") {
+                $(".payment").removeClass("active");
+            }
+        });
+
+
+
+        //주소검색
+        $("#searchAddress").click(function () {
+            new daum.Postcode({
+                oncomplete: function(data) {
+                    $("#address").val(data.address);
+                }
+            }).open();
+        });
+
+
+        //에러
+        $(".num").keyup(function(){
+            if(isNaN($(this).val())){
+                $(this).val("");
+                $(this).attr("placeholder","숫자만 입력해주세요.");
+                $(this).css("border-color","#ff6b6b");
+            }else{
+                $(this).attr("placeholder","-없이 숫자만 입력해주세요");
+                $(this).css("border-color","");
+            }
+
+        });
+
+        // 사이즈
+        $(".size_box button").click(function(){
+            $(".size_box button").removeClass("active");
+            $(this).addClass("active");
+            $(".si").text($(this).text());
+        });
+
+        // 컬러변경시 의상앞면 컬러변경
+        $(".color_box .col").click(function(){
+            $(".color_box .col").removeClass("active");
+            $(this).addClass("active");
+            $(".cl").text($(this).data("color"));
+            $(".itembg img").fadeOut(150,function(){
+                $(this).attr("src", $(".color_box .active").data("img"));
+                $(this).fadeIn(150);
+            });
+        });
+
+        //왼쪽 카드 클릭시 뒷모습
+        $(".item_list li").click(function(){
+            $(".itembg img").attr("src", $(this).data("img"));
+        });
+
+  
+
+        //수량변경과 가격변동
+        let count = 1;
+        let timer;
+
+        // 수량과 가격 업데이트
+        function changeQty(value){
+            count += value;
+
+            // 최소 수량 1개
+            if(count < 1){
+                count = 1;
+            }
+
+            // 수량 표시
+            $(".num").text(count);
+
+            // 상품 금액
+            let price = 2580000 * count;
+
+            // 할인 적용 금액
+            let total = price - 90000;
+
+            // 금액 표시
+            $(".account").text("₩" + price.toLocaleString());
+            $(".lastAccount").text("₩" + total.toLocaleString());
+        }
+
+        // + 버튼
+        $(".p").on("mousedown", function(){
+
+            // 바로 1 증가
+            changeQty(1);
+
+            // 0.5초 후 길게 누르면 연속 증가
+            timer = setTimeout(function(){
+
+                timer = setInterval(function(){
+                    changeQty(1);
+                },100);
+
+            },500);
+
+        });
+
+        // - 버튼
+        $(".m").on("mousedown", function(){
+
+            // 바로 1 감소
+            changeQty(-1);
+
+            // 0.5초 후 길게 누르면 연속 감소
+            timer = setTimeout(function(){
+
+                timer = setInterval(function(){
+                    changeQty(-1);
+                },100);
+
+            },500);
+
+        });
+
+        // 마우스를 떼거나 버튼 밖으로 나가면 연속 증가/감소 종료
+        $(".p, .m").on("mouseup mouseleave", function(){
+
+            clearTimeout(timer);
+            clearInterval(timer);
+
+        });
+
+        // 클릭 시 mousedown과 중복 실행되는 것 방지
+        $(".p, .m").on("click", function(e){
+            e.preventDefault();
+        });
+
+
+
+        //광고슬라이더
+        var swiper = new Swiper('.mySwiper', {
+            speed: 600,
+            loop: true,
+
+            autoplay: {
+                delay: 3000,
+                disableOnInteraction: false,
+            },
+
+            parallax: true,
+
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            }
+        });
+
+
+        //카드선택시 효과
+        $(".item_list li").click(function(){
+            $(".item_list li").removeClass("active");
+            $(this).addClass("active");
+        });
+
+        
+
+        //데이터 저장
+
+        const suitInfo = [
+           {
+                subtitle: "에이펙스 슈트 상의",
+                title: "Upper Suit",
+                desc: "초경량 신소재와 AI 시스템으로<br>탐사 환경을 안전하게 지원합니다.",
+                list: [
+                    "Quantum Fiber™ 외피",
+                    "AI 생존 모니터링",
+                    "플라즈마 방열 코팅",
+                ],
+            },
+            {
+                subtitle: "에이펙스 슈트 하의",
+                title: "Lower Suit",
+                desc: "장시간 착용에도 편안하며 다양한<br>탐사 장비를 안정적으로 지원합니다.",
+                list: [
+                    "Zero Pressure 설계",
+                    "Adaptive Knee 시스템",
+                    "Nano Utility 포켓",
+                ],
+            },
+            {
+                subtitle: "에이펙스 익스플로러 부츠",
+                title: "Explorer Boots",
+                desc: "강력한 접지력과 충격 흡수 기능으로<br>극한 환경에서도 안정성을 제공합니다.",
+                list: [
+                    "Magnetic Grip 밑창",
+                    "충격 흡수 솔 시스템",
+                    "극한 환경 대응 소재",
+                ],
+            },
+        ];
+
+        
+
+        //데이터출력
+        const box = document.querySelector(".item_info .itemBox");
+        const hovers = document.querySelectorAll(".itembg .hover");
+
+        function renderItem(index) {
+        const data = suitInfo[index];
+
+        box.innerHTML = `
+            <h3 class="title">${data.title}</h3>
+            <p class="desc">${data.desc}</p>
+
+            <ul class="tech_list">
+            ${data.list.map(item => `<li>${item}</li>`).join("")}
+            </ul>
+        `;
+        }
+
+        // 기본 출력
+        renderItem(0);
+
+        // Hover 이벤트
+        hovers.forEach(hover => {
+        hover.addEventListener("mouseenter", () => {
+            renderItem(Number(hover.dataset.index));
+        });
+        });
+
+
+        //
+        hovers.forEach(hover => {
+            hover.addEventListener("mouseenter", () => {
+
+                hovers.forEach(h => h.classList.remove("active"));
+                hover.classList.add("active");
+
+                renderItem(Number(hover.dataset.index));
+            });
+        });
+
+        //
+        const itembg = document.querySelector(".itembg");
+
+        hovers.forEach(hover => {
+            hover.addEventListener("mouseenter", () => {
+
+                hovers.forEach(h => h.classList.remove("active"));
+                hover.classList.add("active");
+
+                renderItem(+hover.dataset.index);
+
+            });
+        });
+
+        // 이미지 영역을 벗어나면 active 제거
+        itembg.addEventListener("mouseleave", () => {
+            hovers.forEach(h => h.classList.remove("active"));
+        });
+    </script>
+</body>
+</html>
