@@ -282,7 +282,12 @@
     width:1000px;
     height:500px;
 
-    background:rgb(255,255,255);
+    background: linear-gradient(
+        135deg,
+        #285172,
+        #3A718F,
+        #101C2A
+    );
     border-radius:20px;
     border: 3px solid rgba(0,0,0,0.2);
 
@@ -301,6 +306,7 @@
     font-family: var(--mainKor-font);
     text-transform: uppercase;
     margin-bottom: 10px;
+    color: var(--w);
 }
 
 .cameraArea{
@@ -308,21 +314,40 @@
     height:400px;
 
     background:#222;
-
+    border: 1px solid var(--b);
     color:#fff;
 
     display:flex;
     justify-content:center;
     align-items:center;
 }
+.cameraArea .carebot{
+    width: 100%;
+    height: 100%;
+    object-position: center;
+    object-fit: cover;
+}
+
 .videoConsult_box>button{
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    border: 1px solid var(--b);
+    border: 1px solid var(--gray-100);
     font-size: 18px;
     margin-top: 10px;
     cursor: pointer;
     line-height: 20px;
+    color: #fff;
+    transition: 0.3s;
+}
+.videoConsult_box>button>i{
+    color: var(--gray-100);
+    transition: 0.3s;
+}
+.videoConsult_box>button:hover>i{
+    color: var(--gray-600);
+}
+.videoConsult_box>button:hover{
+    border: 1px solid var(--gray-600);
 }
 

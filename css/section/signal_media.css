@@ -1,328 +1,146 @@
 @charset "utf-8";
 
-@media (max-width: 1740px) {
-    .signalLeft{
-        transform: scale(80%);
+@media (max-width: 1600px) {
+    .signalNotice {
+        width: 360px;
     }
-    .signal_cut{
-        transform: scale(88%);
-        top: -50px;
-        right: -50px;
+    .signalNotice>ul>li>span>em{
+        display: block;
     }
 }
-@media (max-width: 1600px) {
-    .signalHeader_logo {
-        top: 30px;
-        width: 230px;
-    }
-    .signarWrap{
-        overflow: visible;
+@media (max-width: 1200px) {
+    .signarWrap2{
+        width: 100%;
+        height: 115vh;
         overflow-x: hidden;
     }
-    .signalTop{
-        position:relative;
+    #signarVideo{
+        width: 100%;
+        height: 100%;
     }
-    /* 왼쪽 원 중앙 */
-    .signalLeft{
-        transform: scale(100%);
-        top: 100px;
-        position:absolute;
-        left:50%;
+    .signalMy .searchBox {
+        top: 660px;
     }
-    .signalLeft .trend .trend_tit{display: none;}
-    /* 오른쪽 원 중앙 */
-    .signal_cut{
-        transform: scale(100%);
-        top:100px; 
-        position:absolute;
-        width:1300px;
-        height:1300px;
-        left:50%;
-        right:auto;
-        transform:translateX(-50%);
+    .signal {
+        top: 250px;
     }
-    .signalRight{
-        left:0;
-        right:auto;
-    }
-     .singalBottomWrap{
-        top: 730px;
-        width:min(1500px, 100vw);
-        height:min(1500px, 100vw);
-        margin:0 auto;
+    .signalNotice{
+        top: 250px;
     }
 
-    .signalBottom,
-    .circleRotate{
-        width:100%;
-        height:100%;
-    }
-    .signalCenter{
-        display:flex;
-        justify-content:center;
-        align-items:center;
-    }
-    .slideBox{
-        margin:0 auto;
-        transform:translateY(0) scale(90%);
-    }
-    .circleBg{display: none;}
 }
-@media (max-width: 1400px) {
-    .signalHeader_logo {
-        top: 40px;
-        width: 210px;
+@media (max-width: 900px) {
+    .signarWrap2{
+        height: 140vh;
     }
-    .signalTop{
-        transform:scale(calc(100vw / 1340));
-        transform-origin:top center;
-        transform: scale(90%) translateY(20px);
+    .signalMy .searchBox {
+        width: 70vw;
+        top: 260px;
     }
-    .singalBottomWrap{
-        top: 675px;
+    .signalMy .searchBox .signal_search{
+        width: 88%;
     }
-}
-@media (max-width: 1240px) {
-    .signalHeader_logo {
-        top: 40px;
-        width: 200px;
+    .signal {
+        top: 350px;
+        left: 50%;
+        transform: translateX(-50%);
     }
-    .signalTop{
-        transform:scale(calc(100vw / 1340));
-        transform-origin:top center;
-        transform: scale(80%) translateY(40px);
+    .signalNotice{
+        width: 580px;
+        top: 750px;
+        left: 50%;
+        transform: translateX(-50%);
+        background-color: rgba(255,255,255,.9);
     }
-    .signalMy {
-        top: 140px;
+    .signalNotice.active{
+        top: 750px;
     }
-    .singalBottomWrap{
-        top: 615px;
-    }
-    .circleRotate{
-        border:15px solid rgba(255,255,255,0.1);
-    }
-    .signalBottom{
-        border:15px solid rgba(255,255,255,0.5);
-    }
-    .rocket {
-        top: -28px;
-        transform: translateX(-50%) scale(90%);
-    }
-}
-@media (max-width: 1060px) {
-    .signalHeader_logo {
-        top: 20px;
-        width: 160px;
-    }
-    .signalNav {
-        top: 60px;
-        transform: translateX(-50%) scale(80%);
-    }
-    .signalMy {
-        top: 90px;
-    }
-    .signalTop{
-        transform: scale(70%);
-    }
-    .singalBottomWrap{
-        top: 510px;
-    }
-    .rocket {
-        top: -28px;
-        transform: translateX(-50%) scale(80%);
-    }
-@media (max-width: 950px) {
-    .signalHeader_logo {
-        top: 10px;
-        width: 140px;
-    }
-    .signalNav {
-        top: 50px;
-        transform: translateX(-50%) scale(70%);
-    }
-    .signalMy {
-        top: 80px;
-    }
-    .signalMy .myProfile{
-        width: 60px;
-        height: 60px;
-    }
-    .signalMy .myProfile>img {
-        width: 60px;
-        height: 60px;
-    }
-    .signalTop{
-        transform: scale(60%);
-    }
-    .singalBottomWrap{
-        top: 438px;
-    }
-    .circleRotate{
-        border:12px solid rgba(255,255,255,0.1);
-    }
-    .signalBottom{
-        border:12px solid rgba(255,255,255,0.5);
-    }
-    .rocket {
-        transform: translateX(-50%) scale(75%);
+     .signalNotice>ul>li>span>em{
+        display: inline;
     }
 }
 @media (max-width: 780px) {
-    .signalHeader_logo {
-        left: 20px;
-        width: 180px;
-        transform: translateX(0);
+    .signarWrap2{
+        height: 135vh;
     }
-    .signalNav {
-        top: 60px;
-        left: 60px;
-        transform: translateX(0) scale(0.9);
-    }
-     .signalMy {
-        top: 30px;
-        transform: translateX(-50%) translateX(-5px);
-    }
-    .signalTop{
-        transform: scale(50%);
-    }
-    .signal_cut{
-        top: 370px;
-        transform: translateX(-50%) rotate(-45deg) translateX(650px);
-        transform-origin: center center;
-    }
-    .signalLeft .trend .trend_list>li{
-        display: none;
-    }
-    .user{
-        transform: rotate(45deg) scale(1.5);
-    }
-    .rocket {
-        top: -10px;
-    }
-    .singalBottomWrap{
-        top: 400px;
-    }
-    .circleRotate{
-        border:none;
-    }
-    .signalBottom{
-        border:none;
-        overflow: visible;
-        background: none;
-    }
-    .slideBox{
-        overflow: visible;
-    }
-    .signalPopup.show {
-        transform: scale(90%);
-        right: -6vw;
+    .signalSlide{
+        bottom: 30px;
     }
 }
-@media (max-width: 600px) {
-    .swiper-slide {
-        width: 100% !important;
+
+@media (max-width: 650px) {
+    .signarWrap2{
+        height: 140vh;
     }
-     .signalHeader_logo {
-        width: 150px;
+    .signalMy .searchBox {
+        width: 75vw;
     }
-    .signalNav {
-        top: 50px;
-        left: 40px;
-        transform: translateX(0) scale(0.8);
+    .signalMy .searchBox .signal_search{
+        width: 85%;
     }
-    .signalTop{
-        transform: scale(40%);
+    .signalNotice {
+        width: 360px;
     }
-    .signalMy {
-        top: 20px;
-        transform: translateX(-50%) translateX(0px);
-    }
-    .signalMy .myProfile{
-        width: 50px;
-        height: 50px;
-    }
-    .signalMy .myProfile>img {
-        width: 50px;
-        height: 50px;
-    }
-    .user{
-        transform: rotate(45deg) scale(1.7);
-    }
-    .rocket {
-        top: -70px;
-    }
-    .slideBox{
-        transform: scale(90%);
-    }
-    .signalPopup.show {
-        transform: scale(80%);
-        top: -40px;
-        right: -12vw;
-    }
-}
-}
-@media (max-width: 480px) {
-    .signalHeader_logo {
-        display: none;
-    }
-    .signalNav {
-        top: 20px;
-        left: 0;
-        transform: translateX(0) scale(0.7);
-    }
-    .rocket {
-        top: -90px;
-        transform: translateX(-50%) scale(75%);
-    }
-    .slideBox{
-        transform: scale(80%) translateY(-40px);
-    }
-    .mySwiper .swiper-slide {
-        opacity: 1;
-    } 
-    .mySwiper .swiper-slide-prev,
-    .mySwiper .swiper-slide-next{
-        opacity:1;
-    }
-    .signalPopup.show {
-        transform: scale(75%);
-        top: -70px;
-        right: -15vw;
-    }
-    .signal_Mfooter{
+    .signalNotice>ul>li>span>em{
         display: block;
     }
-}    
+    .signalPopup_inner{
+        width: 75vw;
+    }
+    .chatBox .chatInputBox .chat_input{
+        width: 70%;
+    }
+
+}
+@media (max-width: 520px) {
+    .chatBox .chatInputBox .chat_input{
+        width: 65%;
+    }
+}
+
+@media (max-width: 470px) {
+    .signalMy .searchBox {
+        width: 80vw;
+    }
+    .signal {
+        transform: translateX(-50%) scale(0.9);
+    }
+    .signal_bg{
+        overflow: hidden;
+    }
+    .signal_bg > h3{
+        transform: scale(1.1);
+    }
+    .chatBox .chatInputBox .chat_input{
+        width: 60%;
+    }
+    .signalNotice {
+        overflow: hidden;
+        width: 324px;
+    }
+    .signalNotice_tit {
+        border-radius: 0px;
+    }
+    .signalNotice>ul {
+        padding: 10px 20px;
+    }
+    .chatBox .chatInputBox .chat_input{
+        width: 55%;
+    }
+}
 @media (max-width: 380px) {
-    .signalNav {
-        top: 10px;
-        left: 0;
-        transform: scale(0.6);
+    .signalMy .searchBox {
+        width: 90vw;
     }
-    .rocket {
-        top: -120px;
-        transform: translateX(-50%) scale(60%);
+    .signal {
+        transform: translateX(-50%) scale(0.8);
     }
-    .singalBottomWrap{
-        top: 420px;
+     .signalNotice {
+        overflow: hidden;
+        width: 288px;
     }
-    .signalPopup.show {
-        transform: scale(65%);
-        top: -100px;
-        right: -21vw;
+    .chatBox .chatInputBox .chat_input{
+        width: 50%;
     }
 }
-@media (max-width: 340px) {
-    .signalNav {
-        top: 10px;
-        left: 0;
-        transform: scale(0.6);
-    }
-    .rocket {
-        top: -150px;
-        transform: translateX(-50%) scale(50%);
-    }
-    .singalBottomWrap{
-        top: 450px;
-    }
-}
+

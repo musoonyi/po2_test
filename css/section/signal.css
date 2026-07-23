@@ -4,29 +4,32 @@
 @import url(../setting/reset.css);
 @import url(../setting/vars.css);
 
-
-.signarWrap{
+.signarWrap2{
+    position: relative;
     background-image: linear-gradient(to bottom, #131722, #F5F5F5);
     width: 100%;
     height: 100vh;
     overflow: hidden;
+    user-select: none;
+    z-index: 1;
 }
 #signarVideo{
     position: absolute;
     top: 0;
     left: 0;
     z-index: 0;
-    filter: saturate(0.5)brightness(1.1) contrast(0.9);
+    filter: saturate(0.7)brightness(1.1) contrast(0.9);
     opacity: 1;
     width: 100%;
-    height: inherit;
+    height: 100%;
     object-fit: cover;
+    object-position: top;
 }
 /* #signalHeader */
 #signalHeader{}
 .signalHeader_inner{
     position:relative;
-    z-index:1;
+    z-index:2;
     width: 100%;
 }
 .signalHeader_logo{
@@ -72,6 +75,10 @@
 
 /* .signalMy */
 .signalMy{
+    position: relative;
+    width: 100%;
+}
+.signalMy_inner{
     position: absolute;
     top: 150px;
     left: 50%;
@@ -84,15 +91,18 @@
     z-index: 50;
     cursor: pointer;
 }
-.signalMy>button{
+.signalMy .camera,
+.signalMy .money{
     width: 24px;
     height: 24px;
     cursor: pointer;
-    filter: sepia(80%);
-    transition: filter 0.3s;
+    filter: saturate(0%) brightness(3);
+    transform: rotate(0);
+    transition: filter 0.3s, transform 1s;
 }
-.signalMy>button:hover{
-    filter: brightness(1.5);
+.signalMy button:hover{
+    filter: saturate(0%) brightness(0.5);
+    transform: rotate(360deg);
 }
 .signalMy .camera{}
 .signalMy .camera>img{
@@ -100,12 +110,18 @@
     object-position: center;
 }
 .signalMy .myProfile{
+    position: relative;
     width: 70px;
     height: 70px;
     border-radius: 50%;
-    box-shadow:
-    0 0 10px rgba(255,255,255,.35),
-    0 0 20px rgba(85,190,255,.25);
+}
+.signalMy .myProfile::before{
+    content:"";
+    position:absolute;
+    inset:-3px;
+    border-radius:50%;
+    border:1px solid rgba(255,255,255,0.7);
+    background-color:  rgba(127, 157, 181, 0.7);
 }
 .signalMy .myProfile>img{
     filter: contrast(1.1);
@@ -119,105 +135,71 @@
     object-fit: cover;
     object-position: center;
 }
-
-/* .signalTop */
-.signalTop{
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
+.signalMy .searchBox > input{
+    border: none;
+    outline: none;
+    background: none;
 }
-/* .signal_cut */
-.signal_cut{
-    position:absolute;
-    right:0;
-    top:0;
-    width:50vw;
-    height:100vh;
-    overflow:hidden;
-}
-/* .signalLeft */
-.signalLeft{}
-.signalLeft .trend{
-    position: relative;
-    z-index: 0;
-}
-.signalLeft .trend .trend_tit{
+.signalMy .searchBox{
     position: absolute;
-    top: 10px;
-    left: 10px;
-    z-index: 100;
+    top: 450px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 700px;
+    padding: 10px 30px;
+    border-radius: 20px;
+    font-size: 16px;
+    background-color: rgba(127, 157, 181, 0.5);
+    border: 1px solid var(--w);
 }
-.signalLeft .trend .trend_tit>a{}
-.signalLeft .trend .trend_tit>a>span{
-    display: block;
-    font-size: 22px;
-    font-family: var(--mainEng-font);
-    font-weight: 600;
+.signalMy .searchBox .signal_search{
+    width: 90%;
+    height: 20px;
+    margin-right: 5%;
+}
+.signalMy .searchBox .signal_search::placeholder{
+    font-size: 16px;
+    color: var(--w);
+}
+.signalMy .searchBox > button> i{
+    font-size: 17px;
     color: var(--w);
     cursor: pointer;
 }
-.signalLeft .trend .trend_list{
-    position: relative;
-    z-index: 0;
-}
-.signalLeft .trend .trend_list::before{
-    content: "";
-    position: absolute;
-    top: -650px;
-    left: -650px;
-    width: 1300px;
-    height: 1300px;
-    background: url(../../images/circle_img5.png) center no-repeat;
-    z-index: -1;
-    animation: trend360 20s linear infinite;
-    transform-origin: center center;
-}
-@keyframes trend360{
-    0%{transform: rotate(0);}
-    100%{transform: rotate(360deg);}
-}
-.signalLeft .trend .trend_list>li{
-    cursor: pointer;
-}
-.signalLeft .trend .trend_list .t1{
-    margin-left: 110px;
-    padding-top: 85px;
-}
-.signalLeft .trend .trend_list .t2{
-    margin-left: 170px;
-    margin-top: -15px;
-}
-.signalLeft .trend .trend_list .t3{
-    margin-left: 240px;
-    margin-top: -40px;
-}
-.signalLeft .trend .trend_list .t4{
-    margin-left: 310px;
-    margin-top: -80px;
-}
-.signalLeft .trend .trend_list>li>img{}
 
 /* .signalRight */
-.signalRight{
+.signal{
     position: absolute;
-    top: -650px;
-    right: -650px;
-    width: 1300px;
-    height: 1300px;
+    top: 60px;
+    left: 80px;
+    width: 360px;
+    height: 360px;
 }
-.circleBg{
+.signal_bg{
     position:absolute;
     width:100%;
     height:100%;
-    background:url(../../images/circle_img4.png) center no-repeat;
     filter:brightness(1) opacity(0.8) ;
+    border: 1px solid var(--w);
+    border-radius: 20px;
+    box-shadow: inset 0 0 50px rgba(127, 157, 181, 0.7);
+    text-align: center;
 }
+.signal_bg > h3{
+    font-size: 24px;
+    font-weight: 800;
+    font-family: var(--mainKor-font);
+    text-transform: uppercase;
+    color: var(--w);
+    background-color: var(--textH2);
+    border-radius: 20px;
+}
+
 /* #profileCircle */
 #profileCircle{
     position: relative;
-    width: 1300px;
-    height: 1300px;
+    width: 360px;
+    height: 360px;
 }
 #physics{
     position: absolute;
@@ -227,8 +209,8 @@
 }
 .user{
     position:absolute;
-    width:70px;
-    height:70px;
+    width:60px;
+    height:60px;
     border-radius:50%;
     overflow:visible;
     cursor:pointer;
@@ -238,8 +220,8 @@
     content:none;
 }
 .user > img{
-    width:70px;
-    height:70px;
+    width:60px;
+    height:60px;
     border-radius:50%;
     object-fit:cover;
 }
@@ -285,7 +267,6 @@
     transition:.3s;
     white-space:nowrap;
 }
-
 .user:hover .userName{
     opacity:1;
 }
@@ -306,7 +287,6 @@
     color: var(--textH2);
     transition: 0.3s;
 }
-
 svg path {
   fill: red;
 }
@@ -321,113 +301,393 @@ canvas{
     touch-action:none;
 }
 
-/* .singalBottomWrap */
-.singalBottomWrap{
+/* .signalNotice */
+.signalNotice{
+    position: absolute;
+    top: 60px;
+    right: 80px;
+    width: 580px;
+    height: auto;
+    filter:brightness(1) opacity(0.8) ;
+    border: 1px solid var(--w);
+    border-radius: 20px;
+    box-shadow: inset 0 0 50px rgba(127, 157, 181, 0.7);
+    text-align: center;
+    transition: 0.7s linear;
+    background-color: rgba(255,255,255,.3);
+}
+.signalNotice.active{
+    top: -500px;
+}
+.signalNotice_tit{
+    font-size: 24px;
+    font-weight: 800;
+    font-family: var(--mainKor-font);
+    text-transform: uppercase;
+    color: var(--w);
+    background-color: var(--textH2);
+    border-radius: 20px;
+}
+.signalNotice>ul{
+    padding: 15px 30px;
+}
+.signalNotice>ul>li{
+    text-align: left;
+}
+.signalNotice>ul>li>p{
+    position: relative;
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 1.1;
+    padding-left: 15px;
+}
+.signalNotice>ul>li>p::before{
+    content: "";
+    position: absolute;
+    top: 9px;
+    left: 0;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    background-color: var(--textH1);
+}
+.signalNotice>ul>li>span{
+    display: inline-block;
+    padding-left: 15px;
+    font-size: 16px;
+    color: var(--gray-900);
+    margin-bottom: 15px;
+}
+.signalNotice>ul>li:last-child>span{
+    margin-bottom: 0;
+}
+
+
+
+/* .signalPopup */
+.signalPopup{
+    position:fixed;
+    inset:0;
+    z-index:200;
+    opacity:0;
+    visibility:hidden;
+    transition:.35s;
+}
+.signalPopup_inner{
+    position: absolute;
+    top: 30px;
+    right: 0;
+    width: 500px;
+    height: 600px;
+    background-color: rgba(255,255,255,0.25);
+    border-radius: 40px 0 0 120px;
+    z-index: 200;
+    backdrop-filter:blur(20px);
+    -webkit-backdrop-filter:blur(20px);
+    border:1px solid rgba(255,255,255,.3); 
+    transform:translateX(100%);
+    transition:.35s;
+}
+.signalPopup.show{
+    opacity:1;
+    visibility:visible;
+}
+.signalPopup.show .signalPopup_inner{
+    transform:translateX(0);
+}
+
+/* chatBox */
+.chatBox{
     position:relative;
-    width:1500px;
-    height:1500px;
-    margin:-120px auto 0;
+    width: 100%;
+    height: 100%;
+    padding:70px 20px 70px 60px;
 }
-.rotateGroup{
-    position:absolute;
-    inset:0;
-    transform-origin:center center;
-}
-.rotateGroup.active{
-    animation:trend360 20s linear infinite;
-}
-.rocket:active{
-    transform:translateX(-50%) scale(1.2);
-}
-.circleRotate{
-    width: 1500px;
-    height: 1500px;
-    position:absolute;
-    inset:0;
-    border-radius:50%;
-    border:20px solid rgba(255,255,255,0.1);
-}
-.rocket{
-    position:absolute;
-    top:-25px;
-    left:50%;
-    transform:translateX(-50%);
-    background:url(../../images/rocket.png) center no-repeat;
-    width:70px;
-    height:70px;
-    z-index:100;
+/* .chaticon */
+.chatBox .chaticon{
+    position: absolute;
+    bottom: 100px;
+    left: 80px;
     cursor: pointer;
-    filter: brightness(3);
 }
-/* .signalBottom */
-.signalBottom{
-    position:relative;
-    width:1500px;
-    height:1500px;
+.chatBox .chaticon > i{
+    font-size: 20px;
+    color: var(--w);
+    margin-right: 15px;
+    transition: 0.3s;
+}
+.chatBox .chaticon > i:hover{
+    color: rgba(255,255,255,.2);
+}
+
+/* .chatHeader */
+.chatBox .chatHeader{}
+.chatBox .chatHeader .chatImg{
+    position: absolute;
+    top: 20px;
+    left: -50px;
+    width: 90px;
+    height: 90px;
+    z-index: 1;
+    margin-right: 20px;
+}
+.chatBox .chatHeader .chatImg::before{
+    content:"";
+    position:absolute;
+    inset:-3px;
     border-radius:50%;
-    border:20px solid rgba(255,255,255,0.5);
-    overflow:hidden; /* 원 내부는 잘림 유지 */
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color:rgba(127,157,181,0.7);
+    border:1px solid rgba(255,255,255,0.7);
+    z-index:-1;
 }
-/* .signalCenter */
-.signalCenter{
+.chatBox .chatHeader .profile_img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+.chatBox .chatHeader .chat_user{
+    font-size: 16px;
+    font-weight: 800;
+    color: var(--textH1);
+    display: block;
+    transform: translateY(-40px);
+    cursor: pointer;
+}
+.chatBox .chatHeader .chat_user>img{
+    width: 20px;
+    height: auto;
+    object-fit: cover;
+    object-position: center;
+    filter: brightness(1.3) hue-rotate(160deg);
+}
+/* .chatBody */
+.chatBox .chatBody{
+    height:360px;
+    overflow-y:auto;
+    padding-right:10px;
+    display:flex;
+    flex-direction:column;
+}
+.chatBox .chatBody .msg{
+    width:max-content;
+    max-width:80%;
+    height: auto;
+    background-color: var(--w);
+    padding: 10px 20px;
+    font-size: 16px;
+    font-weight: 600;
+    margin-bottom: 5px;
+    line-height: 1.2;
+    border-radius: 3px;
+}
+.chatBox .chatBody .left{
+    margin-right:auto;
+}
+.chatBox .chatBody .right{
+    margin-left:auto;
+}
+.chatBox .chatInputBox{
+    position: absolute;
+    bottom: 35px;
+    left: 50%;
+    transform: translateX(-50%) translateX(70px);
+    width: 100%;
+    background-color:rgba(255,255,255,0.3);
+    border-radius: 50px;
+    border: 1px solid var(--w);
+    padding: 5px;
+}
+.chatBox .chatInputBox input{
+    outline: none;
+    border: none;
+    background: none;
+}
+.chatBox .chatInputBox .chat_input{
+    width: 75%;
+    border-radius: 20px;
+    padding: 10px 20px;
+}
+.chatBox .chatInputBox .chat_input::placeholder{
+    font-size: 16px;
+    font-weight: 600;
+    color: var(--gray-600);
+}
+/* .sendBtn */
+.chatBox .chatInputBox .sendBtn{
+    cursor: pointer;
+    margin-left: 20px;
+    transition: 0.3s;
+}
+.chatBox .chatInputBox .sendBtn:hover{
+    filter: brightness(0);
+}
+
+/* .chatClose */
+.chatBox .chatClose{
+    position: absolute;
+    top: 30px;
+    right: 20px;
+    cursor: pointer;
+}
+.chatBox .chatClose > i{
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    border: 1px solid var(--w);
+    font-size: 18px;
+    cursor: pointer;
+    line-height: 20px;
+    color: var(--w);
+    transition: 0.3s;
+}
+.chatBox .chatClose:hover > i{
+    border: 1px solid var(--b);
+    color: var(--b);
+}
+/* 메세지 */
+.typing{
+    display:flex;
+    align-items:center;
+    gap:6px;
+}
+.typing span{
+    width:8px;
+    height:8px;
+    border-radius:50%;
+    background:#999;
+    animation:typing .8s infinite;
+}
+.typing span:nth-child(2){
+    animation-delay:.15s;
+}
+.typing span:nth-child(3){
+    animation-delay:.3s;
+}
+@keyframes typing{
+    0%,80%,100%{
+        transform:translateY(0);
+        opacity:.3;
+    }
+    40%{
+        transform:translateY(-5px);
+        opacity:1;
+    }
+}
+
+
+/* .signalSlide */
+.signalSlide{
+    position:absolute;
+    bottom: 50px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 100%;
+    overflow: hidden;
+}
+/* .signal_inner */
+.signal_inner{
     width: 100%;
     height: 100%;
     display:flex;
     justify-content:center;
     align-items:flex-start;
 }
-
-/* .slideBox */
-.slideBox{
-    width:700px;
-    overflow:hidden;
-    transform:translateY(120px);
+/* .mySwiper = slideBocx*/
+.mySwiper {
+    width: 100%;
+    height: 100%;
+    overflow: visible;
+}
+.slideBox {
+    cursor: grab;
+}
+.slideBox:active {
+    cursor: grabbing;
 }
 .slideBox .slideBox_list{}
-/* 공통 */
-.slideBox .slideBox_list .s{}
+/* .slideBox .slideBox_list .s */
+.mySwiper .swiper-slide {
+    width: 400px !important;
+    transition: 0.4s;
+}
+.slideBox .slideBox_list .s{
+    position: relative;
+    width: 400px;
+    height: 400px;
+    align-items: center;
+}
+.slideBox .slideBox_list .s::before{
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    z-index: -1;
+    background: rgba(0,0,0,0.2);
+    backdrop-filter: blur(10px);
+
+    box-shadow:
+        inset 0 0 25px rgba(164, 202, 243, 0.15);
+    border: 1px solid rgba(164, 202, 243, 0.25);
+    transition: 0.4s;
+}
+.slideBox .slideBox_list .s:hover::before{
+     box-shadow:
+        inset 0 0 25px rgba(164, 202, 243, 0.7);
+}
+
 /* .slideTop */
 .slideBox .slideBox_list .s .slideTop{
+    width: 100%;
+    height: 100px;
     display: flex;
     align-items: center;
-    margin-bottom: 20px;
+    margin: 24px 0 0 0;
 }
 .slideBox .slideBox_list .s .slideTop>img{
     width: 70px;
     height: 70px;
     object-fit: cover;
     object-position: center;
-    margin-right: 20px;
+    margin-right: 15px;
 }
 .slideBox .slideBox_list .s .slideTop .slide_box{
     width: calc(100% - 120px);
+    white-space: nowrap;
 }
 .slideBox .slideBox_list .s .slideTop .slide_box .profile{
-    font-size: 20px;
+    font-size: 18px;
     color: var(--w);
 }
 .slideBox .slideBox_list .s .slideTop .slide_box .userid{
-    font-size: 20px;
+    font-size: 14px;
     color: var(--w);
 }
 .slideBox .slideBox_list .s .slideTop .slide_box .hour{
-    font-size: 20px;
+    font-size: 14px;
     color: var(--w);
 }
 .slideBox .slideBox_list .s .slideTop .slide_box .desc{
-    font-size: 18px;
+    font-size: 16px;
     color: var(--w);
     display: block;
 }
 .slideBox .slideBox_list .s .slideTop .slide_box .desc>em{
     display: block;
     color: var(--w);
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 /* .slid_more  */
 .slideBox .slideBox_list .s .slideTop .slid_more{
-    position: relative;
-    transform: translateY(40px);
+    position: absolute;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 30px;
     height: 8px;
     cursor: pointer;
@@ -470,27 +730,29 @@ canvas{
 .slideBox .slideBox_list .s .slideTop .slid_more.on .more::after {
     left: 0;
 }
-
 .slideBox .slideBox_list .s .slideTop .slid_more .more_list{
     justify-content: center;
     align-items: center;
     position: absolute;
-    top: -60px;
-    left: 5px;
+    top: -15px;
+    left: -25px;
     opacity: 0;
     visibility: hidden;
     transition: 0.7s;
-    transform: translateY(-5px);
+    display: flex;
+    align-items: center;
 }
 .slideBox .slideBox_list .s .slideTop .slid_more.on .more_list {
     opacity: 1;
     visibility: visible;
-    transform: translateY(0);
 }
-.slideBox .slideBox_list .s .slideTop .slid_more .more_list>li{}
+.slideBox .slideBox_list .s .slideTop .slid_more .more_list>li:nth-of-type(2) i{
+    transform: translateX(30px) translateY(2px);
+}
 .slideBox .slideBox_list .s .slideTop .slid_more .more_list>li>i{
     font-size: 18px;
-    color: rgba(255,255,255,.7);
+    line-height: 1;
+    color: var(--w);
     transition: 0.3s;
 }
 .slideBox .slideBox_list .s .slideTop .slid_more .more_list>li:hover>i{
@@ -498,29 +760,36 @@ canvas{
 }
 
 /* .slideCenter */
-.slideBox .slideBox_list .s .slideCenter{
-    width:700px;
-    height:400px;
+.mySwiper .swiper-slide .slideCenter {
+    width: 400px;
+    height: 230px;
 }
-.slideBox .slideBox_list .s .slideCenter a{}
-.slideBox .slideBox_list .s .slideCenter a img{
-    width: 700px;
-    height: 400px;object-position: center;
+.mySwiper .swiper-slide .slideCenter img{
+    width: 100%;
+    height: 100%;
     object-fit: cover;
+    object-position: center;
+    border-radius: 10px;
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.28);
 }
 /* .slideBottom */
 .slideBox .slideBox_list .s .slideBottom{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 20px;
+    margin-top: 16px;
+    text-align: center;
 }
 .slideBox .slideBox_list .s .slideBottom .icon{}
 .slideBox .slideBox_list .s .slideBottom .icon>span{
+    width: 25px;
+    height: 25px;
     display: inline-block;
     color: var(--text2);
     font-size: 16px;
+    transform: translateY(-3px);
 }
+.slideBox .slideBox_list .s .slideBottom .icon .heart{}
 .slideBox .slideBox_list .s .slideBottom .icon>a{}
 .slideBox .slideBox_list .s .slideBottom .icon>a>img{
     filter: brightness(1.3);
@@ -535,187 +804,8 @@ canvas{
     filter: brightness(1.3) hue-rotate(160deg);
     transform: scale(1);
 }
-.slideBox .slideBox_list .s1{}
-.slideBox .slideBox_list .s2{}
-.slideBox .slideBox_list .s3{}
-.slideBox .slideBox_list .s4{}
-.slideBox .slideBox_list .s5{}
 
 /* 스와이퍼조정 */
-.mySwiper {
-    width: 100%;
-    overflow: visible;
-}
-.mySwiper .swiper-wrapper {
-    align-items: center;
-}
-.mySwiper .swiper-slide {
-    width: 700px !important;
-    flex-shrink: 0;
-    transition: .4s;
-    opacity: .5;
-    transform: scale(.85);
-}
-.mySwiper .swiper-slide img{
-    border-radius: 10px;
-}
-.mySwiper .swiper-slide .slideCenter img{
-    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
-}
-.mySwiper .swiper-slide-active {
-    opacity: 1;
-    transform: scale(1);
-}
+.mySwiper .swiper-slide-active {}
 .mySwiper .swiper-slide-prev,
-.mySwiper .swiper-slide-next{
-    opacity:.8;
-    transform:scale(.92);
-}
-
-/* .signalPopup */
-.signalPopup{
-    position:fixed;
-    inset:0;
-    z-index:200;
-    opacity:0;
-    visibility:hidden;
-    transition:.35s;
-}
-.signalPopup_inner{
-    position: absolute;
-    top: 20px;
-    right: 0;
-    width: 450px;
-    height: 430px;
-    background-color: rgba(255,255,255,0.5);
-    border-radius: 20px 0 0  100px;
-    z-index: 200;
-    backdrop-filter:blur(10px); 
-    transform:translateX(100%);
-    transition:.35s;
-}
-.signalPopup.show{
-    opacity:1;
-    visibility:visible;
-}
-.signalPopup.show .signalPopup_inner{
-    transform:translateX(0);
-}
-.chatBox{
-    width: 100%;
-    height: 100%;
-    padding: 30px 10px 20px 60px;
-}
-/* .chatHeader */
-.chatBox .chatHeader{}
-.chatBox .chatHeader .profile_img{
-    position: absolute;
-    top: 20px;
-    left: -50px;
-    width: 100px;
-    height: 100px;
-}
-.chatBox .chatHeader .chat_user{
-    font-size: 16px;
-    font-weight: 800;
-    color: var(--textH1);
-    display: block;
-    margin-bottom: 20px;
-    cursor: pointer;
-}
-.chatBox .chatHeader .chat_user>img{
-    width: 20px;
-    height: auto;
-    object-fit: cover;
-    object-position: center;
-    filter: brightness(1.3) hue-rotate(160deg);
-
-}
-/* .chatBody */
-.chatBox .chatBody{}
-.chatBox .chatBody .msg{
-    width: 100%;
-    height: auto;
-    background-color: var(--w);
-    display: inline-block;
-    padding: 10px 15px;
-    font-size: 18px;
-    font-weight: 600;
-    margin-bottom: 15px;
-}
-.chatBox .chatBody .left{
-    width: 80%;
-    border-radius: 0 50px 50px 50px;
-    line-height: 1.2;
-}
-.chatBox .chatBody .right1{
-    margin-left: 240px;
-    width: 35%;
-    border-radius: 50px 0 100px 50px;
-}
-.chatBox .chatBody .right2{
-    margin-left: 280px;
-    width: 25%;
-    border-radius: 50px 0 100px 50px;
-}
-.chatBox .chatBody .chat_input{
-    width: 98%;
-    display: block;
-    padding: 15px;
-    border-radius: 50px;
-    outline: none;
-    border: 1px solid var(--w);
-    background-color: rgba(255,255,255,0.5);
-    margin-top: 20px;
-    font-size: 18px;
-}
-.chatBox .chatBody .chat_input::placeholder{
-    font-size: 18px;
-    font-weight: 600;
-    color: var(--gray-600);
-}
-
-/* .chatClose */
-.chatBox .chatClose{
-    position: absolute;
-    top: 30px;
-    right: 20px;
-    cursor: pointer;
-}
-.chatBox .chatClose > i{
-    width: 20px;
-    height: 20px;
-    border-radius: 50%;
-    border: 1px solid var(--w);
-    font-size: 18px;
-    cursor: pointer;
-    line-height: 20px;
-    color: var(--w);
-    transition: 0.3s;
-}
-.chatBox .chatClose:hover > i{
-    border: 1px solid var(--b);
-    color: var(--b);
-}
-
-.signal_Mfooter{
-    display: none;
-    position: absolute;
-    bottom: 0;
-    left: 50%;
-    transform: translateX(-50%);
-    text-align: center;
-}
-.signal_Mfooter>span{
-    display: block;
-    font-size: 10px;
-    font-weight: 400;
-    color: var(--gray-300);
-    white-space: nowrap;
-}
-.signal_Mfooter>span>em{
-    display: block;
-    font-size: 10px;
-    font-weight: 400;
-    color: var(--gray-300);
-}
+.mySwiper .swiper-slide-next{}
