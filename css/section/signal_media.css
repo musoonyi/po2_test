@@ -11,7 +11,7 @@
 @media (max-width: 1200px) {
     .signarWrap2{
         width: 100%;
-        height: 115vh;
+        height: 1300px; /* 140vh */
         overflow-x: hidden;
     }
     #signarVideo{
@@ -31,7 +31,7 @@
 }
 @media (max-width: 900px) {
     .signarWrap2{
-        height: 140vh;
+        height: 1500px; /* 140vh; */
     }
     .signalMy .searchBox {
         width: 70vw;
@@ -61,7 +61,7 @@
 }
 @media (max-width: 780px) {
     .signarWrap2{
-        height: 135vh;
+        /* height: 135vh; */
     }
     .signalSlide{
         bottom: 30px;
@@ -70,7 +70,7 @@
 
 @media (max-width: 650px) {
     .signarWrap2{
-        height: 140vh;
+        height: 1550px; /* height: 140vh; */
     }
     .signalMy .searchBox {
         width: 75vw;
